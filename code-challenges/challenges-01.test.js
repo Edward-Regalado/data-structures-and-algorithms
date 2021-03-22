@@ -43,7 +43,11 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  const answer = [];
+  arr.forEach( function(el) {
+    answer.push(el.toUpperCase());
+  });
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -57,11 +61,15 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  return `${word.toUpperCase()}!`;
 };
 
 const speaker = (words, callback) => {
-  // Solution code here...
+  const answer = [];
+  words.forEach( function (el) {
+    answer.push(callback(el));
+  });
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,13 +88,10 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr, value) => {
-  // Solution code here...
-};
+const addValues = (arr, value) => {return arr.push(value);};
 
-const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
-};
+const addNumbers = (num, arr, times, callback) => { for (let i = 0; i < times; i++)
+  callback(arr, num); return arr;};
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -107,7 +112,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  const answer = [];
+  availableItems.forEach(item => {
+    if(item.available) {
+      answer.push(item.name);
+    }
+  });
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
