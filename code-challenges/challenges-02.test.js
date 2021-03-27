@@ -63,9 +63,7 @@ Write a function named forEachTwoToThe that produces the same output as your for
 
 const forEachTwoToThe = (arr) => {
   let newArr = [];
-
   arr.forEach( num => newArr.push(Math.pow(2, num)));
-
   return newArr;
 
 };
@@ -80,8 +78,6 @@ const mapTwoToThe = (arr) => {
   let newArr = arr.map(num => Math.pow(2, num));
   return newArr;
 };
-
-const mapTwo = (arr) => arr.map(num => Math.pow(2, num));
 
 //you can delete the return and {} to refactor code and make it a one liner
 // can also delete the variabel newArr because it already returns and array.
