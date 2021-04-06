@@ -11,9 +11,7 @@ should convert to ["Jane Doe", "James Bond"]
 Note the space in between first and last names.
 You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
-const toLastNames = people => {
-  // Solution code here...
-};
+const toLastNames = people => people.map(person => `${person.firstName} ${person.lastName}`);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -22,9 +20,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr) => {
-  // Solution code here...
-};
+const addValues = (arr) => arr.reduce((answerSoFar, currentValue) => answerSoFar + currentValue);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -38,9 +34,7 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 ------------------------------------------------------------------------------------------------ */
 
-const addPurchases = (arr) => {
-  // Solution code here...
-};
+const addPurchases = (arr) => arr.reduce((answerSoFar, currentValue) => answerSoFar + currentValue.purchasePrice, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -50,9 +44,7 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => {
-  // Solution code here...
-};
+const countNumberOfElements = (arr) => arr.reduce((element) => element + 1);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
