@@ -20,7 +20,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr) => arr.reduce((answerSoFar, currentValue) => answerSoFar + currentValue);
+const addValues = (arr) => arr.reduce((answerSoFar, currentValue) => answerSoFar + currentValue, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -102,9 +102,11 @@ let starWarsData = [{
   gender: 'female'
 }];
 
-const returnNames = (arr) => {
-  // Solution code here...
-};
+const returnNames = (arr) => arr.reduce((x, y) => {
+  x.push(y.name);
+  return x;
+}, []);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -115,7 +117,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  return str.split('').reduce((rev, char)=>char + rev, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
