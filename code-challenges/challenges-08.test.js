@@ -54,19 +54,19 @@ let characters = [
   }
 ];
 
-const sortByChildren = (charArray) => {
-  // Solution code here...
-};
+const sortByChildren = (charArray) => charArray.sort((x, y) => {
+  return x.children.length - y.children.length;
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not. 
+Write a function named containsW that takes in a string. This function should use a regular expression pattern to return true if the string contains the letter 'w' in lower case or false if it does not.
 
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  let x = /[W]/;
+  let x = /w/;
   return x.test(str);
 };
 
@@ -107,9 +107,8 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-const isCapitalized = (str) => {
-  // Solution code here...
-};
+const isCapitalized = (str) => [...str.matchAll(/\b[A-Z]\w*\b/g)].map(items => items[0]);
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -117,9 +116,7 @@ CHALLENGE 6
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
-const citiesAtoJ = (arr) => {
-  // Solution code here...
-};
+const citiesAtoJ = (arr) => arr.filter(x => (/^[A-J]/).test(x));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal

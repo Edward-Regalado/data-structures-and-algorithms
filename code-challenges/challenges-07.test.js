@@ -24,9 +24,9 @@ let starWarsPeople = [
   }
 ];
 
-const sortStarWarsCharacters = (starWarsArr) => {
-  // Solution code here...
-}
+const sortStarWarsCharacters = (starWarsArr) => starWarsArr.sort((a, b) => {
+  return b.height - a.height;
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -35,7 +35,8 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  return arr.slice(2, 3);
+  arr.splice(idx, 3);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,6 +64,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
+  for (let i = 0; i < str.length + 1; i++) {
+    result.push(str.slice(i));
+  }
   return result;
 };
 
@@ -74,9 +78,7 @@ Write a function name wordsToCharList that, given a string as input, returns a n
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
-const wordsToCharList = (arr) => {
-  // Solution code here...
-};
+const wordsToCharList = (arr) => arr.split('');
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,7 +124,10 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(item => {
+    let x = item.indexOf(' ');
+    result.push(item.slice(item.indexOf(' ', x + 1), item.length).trim());
+  });
   return result;
 };
 

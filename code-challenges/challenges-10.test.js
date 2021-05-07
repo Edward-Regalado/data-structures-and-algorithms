@@ -140,9 +140,14 @@ const errands = [
   }
 ];
 
+
 const howManyTreats = (arr) => {
   return arr[2].items[1].quantity;
 };
+
+
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
