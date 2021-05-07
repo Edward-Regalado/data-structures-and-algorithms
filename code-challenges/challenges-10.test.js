@@ -54,9 +54,9 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   let sum = 0;
-  for (let i = 0; i < matrix.length; i++) {
-    for (let j = 0; j < matrix[i].length; j++) {
-      sum += matrix[i][j];
+  for (let i in matrix) {
+    for (let j in matrix[i]) {
+      sum = sum + matrix[i][j];
     }
   }
   return sum;
@@ -86,15 +86,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  let totalCookies = [];
+  let cookiesArray = [];
   for (let i in hoursOpen) {
     let hourlyTotal = 0;
     for (let j in cookieStores) {
-      hourlyTotal += cookieStores[i][j];
+      hourlyTotal += cookieStores[j][i];
     }
-    totalCookies.push(hourlyTotal);
+    cookiesArray.push(hourlyTotal);
   }
-  return totalCookies;
+  return cookiesArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,9 +108,15 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  let x = [];
-  hours.forEach((hour, index) => x.push({sales: `${data[index]} cookies`, time: hour}));
-  return x;
+  let cookiesSold = [];
+  hours.forEach((hour, index) => {
+    cookiesSold.push(
+      {
+        sales: `${data[index]} cookies`,
+        time: hour
+      });
+  });
+  return cookiesSold;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,7 +140,13 @@ const errands = [
   }
 ];
 
-const howManyTreats = (arr) => arr[2].items[1].quantity;
+
+const howManyTreats = (arr) => {
+  return arr[2].items[1].quantity;
+};
+
+
+
 
 
 /* ------------------------------------------------------------------------------------------------
