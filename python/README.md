@@ -1,8 +1,10 @@
 # Table of Contents
 
-1. Code Challenge 1
+1. [Code Challenge #1 Reverse Array](code_challenges/reverse_array/README.md)
 
 2. [Code Challenge #2 Array Shift](code_challenges/array_shift/README.md)
+
+3. [Code Challenge #3 Array Binary Search](code_challenges/array_binary_search/README.md)
 
 # Data Structures and Algorithms
 
