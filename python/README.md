@@ -1,3 +1,9 @@
+# Table of Contents
+
+1. Code Challenge 1
+
+2. [Code Challenge #2 Array Shift](code_challenges/array_shift/README.md)
+
 # Data Structures and Algorithms
 
 ## Language: `Python`
