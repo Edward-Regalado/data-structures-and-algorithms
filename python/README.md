@@ -6,6 +6,11 @@
 
 3. [Code Challenge #3 Array Binary Search](code_challenges/array_binary_search/README.md)
 
+4. [Code Challange #4 Partner Interview]()
+
+5. [Code Challenge #5 Linked List](code_challenges/linked_list/README.md)
+
+
 # Data Structures and Algorithms
 
 ## Language: `Python`
