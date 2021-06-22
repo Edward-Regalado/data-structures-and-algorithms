@@ -10,6 +10,8 @@
 
 5. [Code Challenge #5 Linked List](code_challenges/linked_list/README.md)
 
+6. [Code Challenge #6 Linked List Insertions](code_challenges/linked_list/README.md)
+
 
 # Data Structures and Algorithms
 
