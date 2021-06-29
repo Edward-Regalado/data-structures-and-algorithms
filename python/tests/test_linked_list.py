@@ -68,6 +68,3 @@ def test_kth_1():
     actual = link_list.kth_from_end(2)
     expected = 'List only has 1 item'
     assert actual == expected
-
-
-

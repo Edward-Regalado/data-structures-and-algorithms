@@ -38,9 +38,13 @@ class LinkedList:
             current = current.next
         return False
 
-    def toString(self):
-        # return a collection of all the values that exist in the linked list
-        pass
+    def __str__(self):
+        string = ""
+        current = self.head
+
+        while current != None:
+            string += f"{ {current.value} } -> "
+            current
 
     def kth_from_end(self, k):
         length = -1
@@ -75,4 +79,21 @@ class LinkedList:
             for i in range(0, target):
                 temp = temp.next
             return temp.value
+
+def zip_list(list1, list2):
+    list1_current = list1.head
+    list2_current = list2.head
+
+    while list1_current != None and list2_current != None:
+        #Save next pointers
+        list1_next = list1_current.next
+        list2_next = list2_current.next
+
+        list2_current.next = list1_next
+        list1_current.next = list2_current
+
+        list1_current = list1_next
+        list2_current = list2_next
+    list2.head = list2_current
+
 
