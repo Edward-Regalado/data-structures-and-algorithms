@@ -1,31 +1,32 @@
-# from tests.test_linked_list import link_list
-
+# Create a node class, which is essentially a sub-class on the LinkedList class.
+# Node class next is initialized with None
+# The last element/node in a linked list will always be None
 
 class Node:
-    # Create a node class, which is essentially a sub-class on the LinkedList class.
-    # Node class next is initialized with None
-    # The last element/node in a linked list will always be None
     def __init__(self, value, next=None):
         self.value = value
         self.next = next
 
+
+# Create a Linked List(singly) class, which is bascially a wrapper that wraps over the node class
+# This function creates the head node
+# This is used as a placeholder node to point to first element in the list and doesn't actually contain any data
+# The user will not be able to access or interact with the head node
+# The head node isn't a data node and doesn't count as a node in the LL
+
 class LinkedList:
-    # Create a Linked List(singly) class, which is bascially a wrapper that wraps over the node class
-    # This function creates the head node
-    # This is used as a placeholder node to point to first element in the list and doesn't actually contain any data
-    # The user will not be able to access or interact with the head node
-    # The head node isn't a data node and doesn't count as a node in the LL
+
     def __init__(self, head=None):
         self.head = head
 
     def insert(self, value):
-        # creating a new node
-        node = Node(value)
+        # creating a new node in front of the Linked List
+        new_node = Node(value)
         # node that comes next will become the head
         if self.head is not None:
-            node.next = self.head
+            new_node.next = self.head
         # setting new node to head
-        self.head = node
+        self.head = new_node
         # return self
 
     def includes(self, value):
@@ -132,5 +133,4 @@ def zip_list(list1, list2):
         list1_current = list1_next
         list2_current = list2_next
     list2.head = list2_current
-
 

@@ -1,4 +1,3 @@
-from abc import abstractclassmethod
 from code_challenges.linked_list.linked_list import LinkedList, Node
 
 def test_import():
@@ -17,31 +16,48 @@ def link_list():
     assert actual == expected
 
 def test_insert():
-    linked_list2 = LinkedList()
+    # creating our instance of Linked List class
+    linked_list = LinkedList()
     # 1 becomes the head
-    linked_list2.insert("1")
+    linked_list.insert("1")
     # now 2 becomes the head as we insert the next node
-    linked_list2.insert("2")
-    # actual is equal to the head
-    actual = linked_list2.head.value
+    linked_list.insert("2")
+    # actual is equal to the head's value
+    actual = linked_list.head.value
     # expected is what we are excepting the value to be
     expected = "2"
     # this is comparing our actual and expected variables and returns True or False
     assert actual == expected
 
+def test_first_node():
+    linked_list = LinkedList()
+    linked_list.insert('lemon')
+    actual = linked_list.head.value
+    expected = 'lemon'
+    assert actual == expected
 
+def test_multiple_nodes_insert():
+    linked_list = LinkedList()
+    linked_list.insert('lemon')
+    linked_list.insert('is')
+    linked_list.insert('my')
+    linked_list.insert('dog\'s')
+    linked_list.insert('name')
+    actual = linked_list.head.next.value
+    expected = 'dog\'s'
+    assert actual == expected
 
-# def test_first_node():
-#     pass
+def test_includes():
+    linked_list = LinkedList(Node('Lemon', Node('is', Node('my', Node('dog')))))
+    actual = linked_list.includes('Lemon')
+    expected = True
+    assert actual == expected
 
-# def test_multiple_nodes_insert():
-#     pass
-
-# def test_includes():
-#     pass
-
-# def test_str():
-#     pass
+def test_str():
+    linked_list = LinkedList(Node('l', Node('e', Node('m', Node('o', Node('n'))))))
+    actual = linked_list.__str__()
+    expected = "{'l'} -> {'e'} -> {'m'} -> {'o'} -> {'n'} -> NULL"
+    assert actual == expected
 
 # Code Challenge 6 test
 
