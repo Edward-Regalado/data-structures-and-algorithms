@@ -12,6 +12,8 @@
 
 6. [Code Challenge #6 Linked List Insertions](code_challenges/linked_list/README.md)
 
+7. [Code Challenge #7 Linked List Kth](code_challenges/linked_list/README.md)
+
 
 # Data Structures and Algorithms
 
