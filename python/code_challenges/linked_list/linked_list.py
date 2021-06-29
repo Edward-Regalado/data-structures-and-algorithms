@@ -5,7 +5,7 @@ class Node:
     # Create a node class, which is essentially a sub-class on the LinkedList class.
     # Node class next is initialized with None
     # The last element/node in a linked list will always be None
-    def __init_(self, value, next=None):
+    def __init__(self, value, next=None):
         self.value = value
         self.next = next
 
@@ -22,10 +22,11 @@ class LinkedList:
         # creating a new node
         node = Node(value)
         # node that comes next will become the head
-        node.next = self.head
+        if self.head is not None:
+            node.next = self.head
         # setting new node to head
         self.head = node
-        return self
+        # return self
 
     def includes(self, value):
         # define the head, which is the current variable
