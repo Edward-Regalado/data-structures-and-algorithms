@@ -1,3 +1,4 @@
+from abc import abstractclassmethod
 from code_challenges.linked_list.linked_list import LinkedList, Node
 
 def test_import():
@@ -41,6 +42,27 @@ def test_insert():
 
 # def test_str():
 #     pass
+
+# Code Challenge 6 test
+
+def test_append():
+    linked_list = LinkedList(Node('d', Node('o', Node('g'))))
+    linked_list.append_end('s')
+    actual = str(linked_list)
+    expected = "{'d'} -> {'o'} -> {'g'} -> {'s'} -> NULL"
+    assert actual == expected
+
+def test_insert_before():
+    linked_list = LinkedList(Node('1', Node('3', Node('4'))))
+    linked_list.insert_before('3', '2')
+    actual = link_list.__str__()
+    expected = "{'1'} -> {'2'} -> {'3'} -> {'4'} -> NULL"
+
+def test_insert_after():
+    linked_list = LinkedList(Node('1', Node('2', Node('4'))))
+    linked_list.insert_after('2', '3')
+    actual = link_list.__str__()
+    expected = "{'1'} -> {'2'} -> {'3'} -> {'4'} -> NULL"
 
 # Code Challenge 7 tests
 

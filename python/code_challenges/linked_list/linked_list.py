@@ -44,7 +44,44 @@ class LinkedList:
 
         while current != None:
             string += f"{ {current.value} } -> "
-            current
+            current = current.next
+        string += f"NULL"
+        return string
+
+    def append_end(self, value):
+        new_node = Node(value)
+        current = self.head
+
+        if current is None:
+           current = new_node
+        else:
+            while current.next is not None:
+                current = current.next
+        current.next = new_node
+
+    def insert_before(self, value, new_value):
+        new_node = Node(new_value)
+        current = self.head
+
+        if current is None:
+            current = new_node
+        while current.next is not None:
+            if current.next == value:
+                current.next = new_node
+            else:
+                current = current.next
+
+    def insert_after(self, value, new_value):
+        new_node = Node(new_value)
+        current = self.head
+
+        if current is None:
+            current = new_node
+        while current.next is not None:
+            if current.next == value:
+                current.next = new_node
+            else:
+                current = current.next
 
     def kth_from_end(self, k):
         length = -1
