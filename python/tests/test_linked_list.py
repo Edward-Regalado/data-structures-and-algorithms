@@ -1,12 +1,13 @@
 from code_challenges.linked_list.linked_list import LinkedList, Node
 
+def test_import():
+    assert LinkedList
 
 def test_node_instance():
-    node1 = Node("apple")
-    actual = node1.value
-    expected = "apple"
+    node = Node('lemon', None)
+    actual = node.value
+    expected = 'lemon'
     assert actual == expected
-    assert node1.next == None
 
 def link_list():
     linked_list1 = LinkedList()
@@ -29,14 +30,44 @@ def test_insert():
 
 
 
-def test_first_node():
-    pass
+# def test_first_node():
+#     pass
 
-def test_multiple_nodes_insert():
-    pass
+# def test_multiple_nodes_insert():
+#     pass
 
-def test_includes():
-    pass
+# def test_includes():
+#     pass
 
-def test_str():
-    pass
+# def test_str():
+#     pass
+
+# Code Challenge 7 tests
+
+def test_kth_from_end():
+    linked_list = LinkedList(Node('d',(Node('a', Node('b', Node('c'))))))
+    actual = linked_list.kth_from_end(1)
+    expected = 'b'
+    assert actual == expected
+
+def test_kth_negative():
+    link_list = LinkedList(Node('d',(Node('a', Node('b', Node('c'))))))
+    actual = link_list.kth_from_end(-6)
+    expected = 'Please choose a positive number'
+    assert actual == expected
+
+def test_kth_too_large():
+    link_list = LinkedList(Node('d',(Node('a', Node('b', Node('c'))))))
+    actual = link_list.kth_from_end(6)
+    expected = 'The linked list is not that long. Please choose a smaller number'
+    assert actual == expected
+
+def test_kth_1():
+    link_list = LinkedList()
+    link_list.insert('a')
+    actual = link_list.kth_from_end(2)
+    expected = 'List only has 1 item'
+    assert actual == expected
+
+
+
