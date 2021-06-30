@@ -1,4 +1,4 @@
-from code_challenges.linked_list.linked_list import LinkedList, Node
+from code_challenges.linked_list.linked_list import LinkedList, Node, zip_list
 
 def test_import():
     assert LinkedList
@@ -105,4 +105,22 @@ def test_kth_1():
     link_list.insert('a')
     actual = link_list.kth_from_end(2)
     expected = 'List only has 1 item'
+    assert actual == expected
+
+# Code Challenge 8 tests
+
+def test_zip_list():
+    linked_list = LinkedList(Node('1', Node('3', Node('5'))))
+    linked_list2 = LinkedList(Node('2', Node('4', Node('6'))))
+    zip_list(linked_list, linked_list2)
+    actual = linked_list.__str__()
+    expected = "{'1'} -> {'2'} -> {'3'} -> {'4'} -> {'5'} -> {'6'} -> NULL"
+    assert actual == expected
+
+def test_zip_list_diff_size():
+    linked_list = LinkedList(Node('1', Node('3', Node('5'))))
+    linked_list2 = LinkedList(Node('2', Node('4')))
+    zip_list(linked_list, linked_list2)
+    actual = linked_list.__str__()
+    expected = "{'1'} -> {'2'} -> {'3'} -> {'4'} -> {'5'} -> NULL"
     assert actual == expected
