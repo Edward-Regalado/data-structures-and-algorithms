@@ -14,6 +14,18 @@
 
 7. [Code Challenge #7 Linked List Kth](code_challenges/linked_list/README.md)
 
+8. [Code Challenge #8]()
+
+9. [Code Challenge #9]()
+
+10. [Code Challenge #10]()
+
+11. [Code Challenge #11]()
+
+12. [Code Challenge #12]()
+
+13. [Code Challenge #13](code_challenges/stack_queue_brackets/README.md)
+
 
 # Data Structures and Algorithms
 
