@@ -1,4 +1,4 @@
-class InvalidOperationError(BaseException):
+class IsEmptyError(Exception):
     pass
 
 class Node:
@@ -11,65 +11,84 @@ class Stack:
         self.top = node
 
     def push(self, value):
-        # create a node, pass in value
-        node = Node(value)
+        # create a node instance, pass in value(data, string, int, etc)
+        new_node = Node(value)
         # this points the new node to top of stack
-        node.next = self.top
-        # assign node to the top of stack
-        self.top = node
+        new_node.next = self.top
+        # assign new_node to the top of stack
+        self.top = new_node
 
-    def pop(self, value):
+    def pop(self):
+        # first check to see if stack is empty
         if self.is_empty():
-            raise InvalidOperationError("Method not allowed on empty collection")
-        node = self.top
+            raise IsEmptyError("The stack is empty, therefore cannot pop.")
+        # save the current head/top to variable to return after it is popped/removed
+        popped_node = self.top
+        # reassign the node below the popped/removed node to be the new top/head
         self.top = self.top.next
-        return node.value
+        # return the popped nodes value
+        return popped_node.value
 
     def peek(self):
+        # first check to see if stack is empty
         if self.is_empty():
-            raise InvalidOperationError("Method not allowed on empty collection")
+            raise IsEmptyError("The stack is empty, therefore cannot peek.")
+        # if the above code is False(stack is not empty) return the current top/head value
+        return self.top.value
 
     def is_empty(self):
-        if self.top == None:
-            return True
-        else:
-            return False
+        # returns True if equal to None or 0, else returns False
+        # can also write an if/else statement
+        return self.top == None
 
 class Queue:
     # First-In-First-Out
     def __init__(self, node=None):
+        # the first node instace in the queue is both the front and rear
+        # it's like a single person standing in line for a movie- they're both the front and rear of the line
         self.front = node
-        self.rear = Node
+        self.rear = node
 
     def enqueue(self, value):
-        node = Node(value)
+        # create a node instance, pass in value
+        # similar to pushing and popping, but we enqueue elements from the back and dequeue from the front.
+        new_node = Node(value)
 
+        # if the queue is empty, then set the new_node instance to both the head/tail or front/rear of the queue
         if self.front is None:
-            self.front = node
-            self.rear = node
+            self.front = new_node
+            self.rear = new_node
+            return self
+        # if the queue isn't empty, then set the new_node to the rear/back of the queue. This is the new tail node.
+        else:
+            self.rear.next = new_node
+            self.rear = new_node
             return self
 
-        self.rear.next = node
-        self.rear = node
-        return self
-
     def dequeue(self):
-
-        if self.front is None:
-            return None
-
-        deque = self.front.value
+        # remove element from queue, front of the line or FIRST-IN-FIRST-OUT
+        # first check to see if the queue is empty
+        if self.is_empty():
+            raise IsEmptyError("The queue is empty, therefore cannot dequeue")
+        # if the above code is false, then remove the front value of the queue, save to variable so we can return later
+        # set the front.next, which points to the element behind what we just removed to be the new front/head of the queue
+        # rinse and repeat until the queue is empty, which will raise an error.
+        dequeued_node = self.front.value
         self.front = self.front.next
-        return deque
+        if self.is_empty():
+            self.rear = None
+        return dequeued_node
 
     def peek(self):
-
-        if self.front is None:
-            return None
-
+        if self.is_empty:
+            raise IsEmptyError("The queue is empty, therefore cannot retrieve.")
         return self.front.value
+        # if self.front is None:
+        #     return None
 
-    def isEmpty(self):
+        # return self.front.value
+
+    def is_empty(self):
         return self.front == None
 
 if __name__ == "__main__":
