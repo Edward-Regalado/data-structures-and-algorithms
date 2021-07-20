@@ -18,7 +18,7 @@
 
 9. [Code Challenge #9]()
 
-10. [Code Challenge #10]()
+10. [Code Challenge #10](code_challenges/stack_and_queue/README.md)
 
 11. [Code Challenge #11]()
 
