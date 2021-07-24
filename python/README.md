@@ -26,6 +26,8 @@
 
 13. [Code Challenge #13](code_challenges/stack_queue_brackets/README.md)
 
+14. [Code Challenge #14](code_challenges)
+
 
 # Data Structures and Algorithms
 
