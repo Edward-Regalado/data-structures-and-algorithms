@@ -7,7 +7,7 @@ class Node:
         self.left = left
         self.right = right
 
-    pass
+#//////////////////////////////////////////////////////////////////#
 
 class BinaryTree:
     """
@@ -87,7 +87,27 @@ class BinaryTree:
 
         return elements
 
+    # Find Max Value Method: Traverse a Binary Tree and find the max value.
+    def max_value(self):
+        max_value = self.root.value
 
+        def traverse(root):
+            nonlocal max_value
+
+            if root.value > max_value:
+                max_value = root.value
+
+            if root.left:
+                traverse(root.left)
+
+            if root.right:
+                traverse(root.right)
+
+        traverse(self.root)
+        return max_value
+
+
+#/////////////////////////////////////////////////////////////////////#
 
 class BinarySearchTree(BinaryTree):
     """
@@ -120,7 +140,9 @@ class BinarySearchTree(BinaryTree):
 
 
     def contains(self, value):
-        """Search to see if the BST contains a certain value. Returns a boolean to see if value is already inside the tree"""
+        """
+        Search to see if the BST contains a certain value. Returns a boolean to see if value is already inside the tree
+        """
         if self.value == value:
             return True
 
@@ -135,7 +157,3 @@ class BinarySearchTree(BinaryTree):
                 self.right.contains(value)
             else:
                 return False
-
-
-
-
