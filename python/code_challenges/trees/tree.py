@@ -1,3 +1,5 @@
+
+
 class Node:
     """
     Create a Node which has properties of the value stored in the Node, left and right child nodes.
@@ -105,6 +107,27 @@ class BinaryTree:
 
         traverse(self.root)
         return max_value
+
+    def breadth(self):
+
+        root = self.root
+
+        if root is None:
+            return "Tree is empty"
+
+        else:
+            order = []
+            queue = Queue()
+            queue.enque(root)
+
+            while not queue.isEmpty():
+                front = queue.dequeue()
+                order.append(front.value)
+                if front.left:
+                    queue.enqueue(front.left)
+                if front.right:
+                    queue.enqueue(front.left)
+        return order
 
 
 #/////////////////////////////////////////////////////////////////////#
