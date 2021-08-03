@@ -1,4 +1,4 @@
-
+from code_challenges.stack_and_queue.stack import Queue, Node
 
 class Node:
     """
@@ -17,7 +17,7 @@ class BinaryTree:
 
     """
     def __init__(self, root = None):
-        self.root = Node(root)
+        self.root = root
 
      # Preorder Method: Traverse a Binary Tree from root >> left >> right.
     def pre_order(self):
@@ -71,10 +71,12 @@ class BinaryTree:
     # PostOrder Method: Traverse a Binary Tree from left >> right>> root.
     def post_order(self):
 
-        elements = []
+
 
         if self.root is None:
             return "Empty Tree"
+
+        elements = []
 
         def traverse(root):
             if root.left:
@@ -83,7 +85,7 @@ class BinaryTree:
             if root.right:
                 traverse(root.right)
 
-            elements.apend(root.value)
+            elements.append(root.value)
 
         traverse(self.root)
 
@@ -108,19 +110,20 @@ class BinaryTree:
         traverse(self.root)
         return max_value
 
+    # Breadth-first: Traverse a Binary Tree breadth-first
     def breadth(self):
 
         root = self.root
 
         if root is None:
-            return "Tree is empty"
+            return "Empty Tree"
 
         else:
             order = []
             queue = Queue()
-            queue.enque(root)
+            queue.enqueue(root)
 
-            while not queue.isEmpty():
+            while not queue.is_empty():
                 front = queue.dequeue()
                 order.append(front.value)
                 if front.left:
@@ -136,16 +139,22 @@ class BinarySearchTree(BinaryTree):
     """
     Add a node to the binary search tree. BST only contains intergers/numbers.
     """
-    def __init__(self, value):
-        self.value = value
+    def __init__(self, root = None):
+        self.root = root
+        # self.value = value
         self.left = None
         self.right = None
 
     def add(self, value):
 
+        if value is None or type(value) == str:
+            return "Node must contain a number"
+
+        # node = Node(value)
 
         if value == self.value:
             return Node(value)
+
 
         if value < self.value:
 
@@ -166,6 +175,10 @@ class BinarySearchTree(BinaryTree):
         """
         Search to see if the BST contains a certain value. Returns a boolean to see if value is already inside the tree
         """
+
+        if value is None or type(value) == str:
+            return "Node must contain a number"
+
         if self.value == value:
             return True
 
