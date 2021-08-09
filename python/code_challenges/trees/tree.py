@@ -139,9 +139,9 @@ class BinarySearchTree(BinaryTree):
     """
     Add a node to the binary search tree. BST only contains intergers/numbers.
     """
-    def __init__(self, root = None):
+    def __init__(self, root = None, value = None):
         self.root = root
-        # self.value = value
+        self.value = value
         self.left = None
         self.right = None
 
@@ -150,46 +150,44 @@ class BinarySearchTree(BinaryTree):
         if value is None or type(value) == str:
             return "Node must contain a number"
 
-        # node = Node(value)
+        node = Node(value)
 
-        if value == self.value:
-            return Node(value)
+        if self.root is None:
 
+            self.root = node
 
-        if value < self.value:
+        current = self.root
 
-            if self.left:
-                self.left.add(value)
+        while current != None:
+            if current.value > value:
+                if current.left is None:
+                    current.left = node
 
-            else:
-                self.left = BinaryTree(value)
+                else:
+                    current = current.left
 
-        else:
-            if self.right:
-                self.right.add(value)
-            else:
-                self.right = BinaryTree(value)
+            if current.value < value:
+                if current.right is None:
+                    current.right = node
+                else:
+                    current = current.right
+
+            if current.value == value:
+                return "Value already in tree"
 
 
     def contains(self, value):
         """
         Search to see if the BST contains a certain value. Returns a boolean to see if value is already inside the tree
         """
+        current = self.root
 
-        if value is None or type(value) == str:
-            return "Node must contain a number"
-
-        if self.value == value:
-            return True
-
-        if value < self.value:
-            if self.left:
-                self.left.contains(value)
-            else:
-                return False
-
-        if value > self.value:
-            if self.right:
-                self.right.contains(value)
+        while current != None:
+            if current.value > value:
+                current = current.left
+            if current.value < value:
+                current = current.right
+            if current.value == value:
+                return True
             else:
                 return False

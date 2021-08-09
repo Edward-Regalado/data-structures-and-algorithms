@@ -76,14 +76,14 @@ def test_post_order(letter_tree):
 
 def test_add_node_to_empty_BST():
     tree = BinarySearchTree()
-    tree.add(5)
+    tree.add(1)
     actual = tree.root.value
-    expected = 5
+    expected = 1
     assert actual == expected
 
-def test_add_non_int_node_to_BST():
+def test_add_string_to_BST():
     tree = BinarySearchTree()
-    actual = tree.add("Hello")
+    actual = tree.add("Programmer")
     expected = "Node must contain a number"
     assert actual == expected
 
@@ -93,40 +93,40 @@ def test_add_empty_node_to_BST():
     expected = "Node must contain a number"
     assert actual == expected
 
-def test_add_node_to_non_empty_BST():
+def test_add_two_nodes_BST():
     tree = BinarySearchTree()
-    tree.add(5)
-    tree.add(10)
+    tree.add(1)
+    tree.add(2)
     actual = tree.root.right.value
-    expected = 10
+    expected = 2
     assert actual == expected
 
-def test_add_node_again():
+def test_add_node():
     tree = BinarySearchTree()
-    tree.add(5)
-    tree.add(10)
-    tree.add(7)
-    actual = tree.root.right.left.value
-    expected = 7
+    tree.add(1)
+    tree.add(2)
+    tree.add(3)
+    actual = tree.root.right.right.value
+    expected = 3
     assert actual == expected
 
-def test_contains_method_returns_false():
+def test_contains_false():
     tree = BinarySearchTree()
-    tree.add(5)
-    tree.add(6)
-    tree.add(7)
-    tree.add(8)
-    actual = tree.contains(9)
+    tree.add(1)
+    tree.add(2)
+    tree.add(3)
+    tree.add(4)
+    actual = tree.contains(5)
     expected = False
     assert actual == expected
 
 
-#///////// Code Challenge 16 //////////////////
+# #///////// Code Challenge 16 //////////////////
 
 
 
 
-#///////// Code Challenge 17 //////////////////
+# #///////// Code Challenge 17 //////////////////
 
 def example_tree():
     tree = BinaryTree()
@@ -145,6 +145,7 @@ def test_breadth_first_negative(negative_tree):
 
 
 #//////////// Fixtures //////////////
+# Credit to Kassive Bradshaw for the fixtures idea!!
 
 @pytest.fixture
 def empty_tree():
