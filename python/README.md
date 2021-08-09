@@ -28,6 +28,14 @@
 
 14. [Code Challenge #14](code_challenges)
 
+15. [Code Challenge #15](code_challenges/)
+
+16. [Code Challenge #16](code_challenges/)
+
+17. [Code Challenge #17](code_challenges/trees/README.md)
+
+18. [Code Challenge #18](code_challenges/tree_fiz_buzz/README.md)
+
 
 # Data Structures and Algorithms
 
