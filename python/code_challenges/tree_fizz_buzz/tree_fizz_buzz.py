@@ -26,7 +26,7 @@ class K_aryTree:
         return list
 
 
-@staticmethod
+# @staticmethod
 def fizz_buzz_tree(tree):
 
     root = tree.root
