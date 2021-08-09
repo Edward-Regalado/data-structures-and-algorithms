@@ -28,7 +28,7 @@
 
 14. [Code Challenge #14](code_challenges)
 
-15. [Code Challenge #15](code_challenges/)
+15. [Code Challenge #15](code_challenges/README.md)
 
 16. [Code Challenge #16](code_challenges/trees/README.md)
 
