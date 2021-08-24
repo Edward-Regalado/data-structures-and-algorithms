@@ -26,10 +26,10 @@ class K_aryTree:
         return list
 
 
-# @staticmethod
+
 def fizz_buzz_tree(tree):
 
-    root = tree.root
+    root = tree
     list = []
 
     if root.value is None:
@@ -37,7 +37,7 @@ def fizz_buzz_tree(tree):
 
     def traverse(root):
 
-        if root is None:
+        if root.value is None:
            return
         if root.value % 3 == 0 and root.value % 5 == 0:
             root.value = "FizzBuzz"
@@ -45,11 +45,10 @@ def fizz_buzz_tree(tree):
             root.value == "Fizz"
         elif root.value % 5 == 0:
             root.value = "Buzz"
-            list.append(root.value)
-            traverse(root.left)
-            traverse(root.right)
+        list.append(root.value)
+        traverse(root.left)
+        traverse(root.right)
 
-        traverse(root)
-
+        return list
 
 

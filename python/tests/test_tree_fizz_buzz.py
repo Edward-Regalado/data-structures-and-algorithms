@@ -12,12 +12,12 @@ def test_empty_tree():
 def test_tree_traverse():
     tree = K_aryTree(Node(1))
     tree.root.left = Node(3)
-    tree.root.right = Node(5)
-    tree.root.left.left = Node(15)
+    # tree.root.right = Node(5)
+    # tree.root.left.left = Node(15)
     # tree.root.left.right = Node(85)
     # tree.root.right.left = Node(42)
     actual = fizz_buzz_tree(tree)
-    expected = [1, "Fizz", "Buzz", "FizzBuzz"]
+    expected = [1, "Fizz"]
     assert actual == expected
 
 
