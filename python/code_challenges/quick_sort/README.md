@@ -79,7 +79,6 @@ Ensure your complete code solution follows the standard requirements.
 ## White Board
 - [Quick Sort](../../assets/quick_sort.PNG)
 
-
 ## Credit & Colalboration
 
 - Anthony Willaims, Kevin Henry
