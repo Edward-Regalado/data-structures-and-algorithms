@@ -36,6 +36,15 @@
 
 18. [Code Challenge #18](code_challenges/tree_fiz_buzz/README.md)
 
+<<<<<<< HEAD
+=======
+19.
+
+20.
+
+21. [Code Challenge #28](code_challenges/quick_sort/README.md)
+
+>>>>>>> 16c766e (finished functions and visual whiteboard for code challenge 28)
 
 # Data Structures and Algorithms
 
