@@ -77,7 +77,7 @@ Ensure your complete code solution follows the standard requirements.
 - Share your article on LinkedIn, so that your network knows how awesome you are.
 
 ## White Board
--[Quick Sort](../../assets/quick_sort.PNG)
+- [Quick Sort](../../assets/quick_sort.PNG)
 
 
 ## Credit & Colalboration
