@@ -42,6 +42,8 @@
 
 21. [Code Challenge #28](code_challenges/quick_sort/README.md)
 
+22. [Code Challegne #29](code_challenges/hashtable/README.md)
+
 # Data Structures and Algorithms
 
 ## Language: `Python`
