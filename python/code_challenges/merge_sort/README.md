@@ -77,7 +77,10 @@ Submit a link to a pull request that contains your completed version of `BLOG.md
 
 Share your article on LinkedIn, so that your network knows how awesome you are.
 
+## White Board
+- [Merge Sort](../../assets/merge_sort.PNG)
+
+
 ## Collab & Credit
 
 [GeeksforGeeks]https://www.geeksforgeeks.org/merge-sort/)
-[GeeksforGeeks]()
