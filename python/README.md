@@ -42,7 +42,11 @@
 
 21. [Code Challenge #28](code_challenges/quick_sort/README.md)
 
-22. [Code Challegne #29](code_challenges/hashtable/README.md)
+22. [Code Challenge #29](code_challenges/hashtable/README.md)
+
+23. [Code Challenge #30](code_challenges/hashmap_repeated_word/README.md)
+
+24. [Code Challenge #31]()
 
 # Data Structures and Algorithms
 
