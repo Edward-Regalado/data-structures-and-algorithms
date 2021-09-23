@@ -1,19 +1,19 @@
+from code_challenges.stack_and_queue.stack import Queue
 
 class Graph:
     def __init__(self):
         # stores all of the verts inside graph
         self._adjacency_list = {}
 
-    def add_node(self, value):
+    def add_node(self, node):
         '''
         add node
         Args: value
         Returns: the added node
         Add a node to the graph
         '''
-        v = Vertex(value)
-        self._adjacency_list[v] = []
-        return v
+        self._adjacency_list[node] = []
+        return node
 
     def add_edge(self, start_vertex, end_vertex, weight=0):
         '''
@@ -56,6 +56,31 @@ class Graph:
         '''
         return len(self._adjacency_list)
 
+
+    def breadth_first(self, vertex):
+        '''
+        Arguments: Node
+        Return: A collection of nodes in the order they were visited.
+        Display the collection
+        '''
+        nodes = []
+        queue = Queue()
+        visited = set()
+
+        queue.enqueue(vertex)
+        visited.add(vertex.value)
+
+        while len(queue) > 0:
+            front = queue.dequeue(0)
+            neighbors = self.get_neighbors(front)
+            nodes.append(front)
+
+            for neighbor in neighbors:
+                if neighbor[0].value not in visited:
+                    visited.add(neighbor[0].value)
+                    queue.enqueue(neighbor[0])
+
+        return nodes
 
 class Vertex:
     def __init__(self, value=None):
