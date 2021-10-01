@@ -1,4 +1,4 @@
-from code_challenges.stack_and_queue.stack import Queue
+from code_challenges.stack_and_queue.stack import Node, Queue, Stack
 
 class Graph:
     def __init__(self):
@@ -12,6 +12,7 @@ class Graph:
         Returns: the added node
         Add a node to the graph
         '''
+        # v = Vertex(value)
         self._adjacency_list[node] = []
         return node
 
@@ -68,26 +69,48 @@ class Graph:
         visited = set()
 
         queue.enqueue(vertex)
-        visited.add(vertex.value)
+        visited.add(vertex)
 
-        while len(queue) > 0:
-            front = queue.dequeue(0)
+        while queue:
+            front = queue.dequeue()
             neighbors = self.get_neighbors(front)
             nodes.append(front)
 
             for neighbor in neighbors:
-                if neighbor[0].value not in visited:
-                    visited.add(neighbor[0].value)
-                    queue.enqueue(neighbor[0])
+                if neighbor not in visited:
+                    visited.add(neighbor)
+                    queue.enqueue(neighbor)
 
         return nodes
 
+    def depth_first(self, vertex):
+        '''
+        Agruments: Node(Starting point of search)
+        Return: A collection of nodes in their pre-order depth-first traversal order
+        Display the collection
+        '''
+        nodes = []
+        stack = Stack(vertex)
+        visited = set()
+
+        while stack:
+            curr = stack.pop()
+            if curr not in visited:
+                nodes.append(curr)
+                visited.add(curr)
+            for neighbor in self._adjacency_list[curr]:
+                stack.push(neighbor.vertex)
+        return nodes
+
+
 class Vertex:
+    ''' creates a new node/vertex with a value (default is none)'''
     def __init__(self, value=None):
         self.value = value
 
 
 class Edge:
+    ''' creates a new edge between two or more nodes/vertex'''
     def __init__(self, vertex, weight=0):
         self.vertex = vertex
         self.weight = weight

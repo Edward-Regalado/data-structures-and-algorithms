@@ -89,3 +89,32 @@ Utilize the Single-responsibility principle: any methods you write should be cle
 Write at least three test assertions for each method that you define.
 
 Ensure your tests are passing before you submit your solution.
+
+# Code Challenge: Class 38
+
+Conduct a depth first preorder traversal on a graph
+
+## Specifications
+
+- Read all of these instructions carefully.
+- Name things exactly as described.
+- Do all your work in a your data-structures-and-algorithms public repository.
+- Create a new branch in your repo named as noted below.
+- Follow the language-specific instructions for the challenge type listed below.
+- Update the “Table of Contents” - in the README at the root of the repository - with a link to this challenge’s README file.
+
+### Challenge Setup & Execution
+
+Branch Name: graph-depth-first
+
+Challenge Type: Extending an Implementation
+
+## Feature Tasks
+
+Write the following method for the Graph class:
+
+- depth first
+- Arguments: Node (Starting point of search)
+- Return: A collection of nodes in their pre-order depth-first traversal order
+- Display the collection
+
