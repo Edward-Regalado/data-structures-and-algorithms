@@ -1,4 +1,4 @@
-# Data Structures and Algorithms
+# Table of Contents
 
-## Language: `Java`
+[Code Challenge #1 Array Reverse](array-reverse/README.md)
 
