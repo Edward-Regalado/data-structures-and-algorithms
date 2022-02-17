@@ -1,52 +1,52 @@
 # Table of Contents
 
-[Code Challenge #1 Reverse Array](code_challenges/array_reverse/README.md)
+[Code Challenge: 1 - Reverse Array](code_challenges/array_reverse/README.md)
 
-[Code Challenge #2 Array Shift](code_challenges/array_shift/README.md)
+[Code Challenge: 2 - Array Shift](code_challenges/array_shift/README.md)
 
-[Code Challenge #3 Array Binary Search](code_challenges/array_binary_search/README.md)
+[Code Challenge: 3 - Array Binary Search](code_challenges/array_binary_search/README.md)
 
-[Code Challange #4 Partner Interview]()
+[Code Challange: 4 - Partner Interview]()
 
-[Code Challenge #5 Linked List](code_challenges/linked_list/README.md)
+[Code Challenge: 5 - Linked List](code_challenges/linked_list/README.md)
 
-[Code Challenge #6 Linked List Insertions](code_challenges/linked_list/README.md)
+[Code Challenge: 6 - Linked List Insertions](code_challenges/linked_list/README.md)
 
-[Code Challenge #7 Linked List Kth](code_challenges/linked_list/README.md)
+[Code Challenge: 7 - Linked List Kth](code_challenges/linked_list/README.md)
 
-[Code Challenge #8]()
+[Code Challenge: 8 -]()
 
-[Code Challenge #9]()
+[Code Challenge: 9 -]()
 
-[Code Challenge #10](code_challenges/stack_and_queue/README.md)
+[Code Challenge: 10 - Stack & Queue](code_challenges/stack_and_queue/README.md)
 
-[Code Challenge #11]()
+[Code Challenge: 11 -]()
 
-[Code Challenge #12]()
+[Code Challenge: 12 -]()
 
-[Code Challenge #13](code_challenges/stack_queue_brackets/README.md)
+[Code Challenge: 13 - Stack Queue Brackets](code_challenges/stack_queue_brackets/README.md)
 
-[Code Challenge #14](code_challenges)
+[Code Challenge: 14 -](code_challenges)
 
-[Code Challenge #15](code_challenges/README.md)
+[Code Challenge: 15 -](code_challenges/README.md)
 
-[Code Challenge #16](code_challenges/trees/README.md)
+[Code Challenge: 16 -](code_challenges/trees/README.md)
 
-[Code Challenge #17](code_challenges/trees/README.md)
+[Code Challenge: 17 - Trees](code_challenges/trees/README.md)
 
-[Code Challenge #18](code_challenges/tree_fiz_buzz/README.md)
+[Code Challenge: 18 - Fizz Buzz Tree](code_challenges/tree_fiz_buzz/README.md)
 
-[Code Challenge #27]()
+[Code Challenge: 27 -]()
 
-[Code Challenge #28](code_challenges/quick_sort/README.md)
+[Code Challenge: 28 - Quick Sort](code_challenges/quick_sort/README.md)
 
-[Code Challenge #29](code_challenges/hashtable/README.md)
+[Code Challenge: 29 - Hashtable](code_challenges/hashtable/README.md)
 
-[Code Challenge #30](code_challenges/hashmap_repeated_word/README.md)
+[Code Challenge: 30 - HashMap Repeated Word](code_challenges/hashmap_repeated_word/README.md)
 
-[Code Challenge #31]()
+[Code Challenge: 31 -]()
 
-[Code Challenge #35](code_challenges/graph/README.md)
+[Code Challenge: 35 - Graphs](code_challenges/graph/README.md)
 
 # Data Structures and Algorithms
 
