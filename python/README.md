@@ -1,6 +1,6 @@
 # Table of Contents
 
-[Code Challenge #1 Reverse Array](code_challenges/reverse_array/README.md)
+[Code Challenge #1 Reverse Array](code_challenges/array_reverse/README.md)
 
 [Code Challenge #2 Array Shift](code_challenges/array_shift/README.md)
 
