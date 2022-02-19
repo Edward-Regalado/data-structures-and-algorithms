@@ -1,4 +1,4 @@
-# Code Challenge: Class 01
+# Code Challenge: Array Reverse
 
 ## Specifications
 

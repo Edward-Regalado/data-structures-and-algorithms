@@ -1,4 +1,4 @@
-# Code Challenge: Class 02
+# Code Challenge: Array Insert Shift
 
 ## Specifications
 
