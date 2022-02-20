@@ -11,7 +11,7 @@ public class LinkedListChallengesTest
   {
     LinkedListChallenges sut = new LinkedListChallenges();
     sut.linkedListChallenge06();
-    System.out.println("test something here");
+    System.out.println("test code challenges here");
     assertTrue(true);
   }
 }
