@@ -5,9 +5,9 @@ public class LinkedList {
   Node head = null;
   Node tail = null;
   // Node head; <- alt syntax defualts to null
-  // Node tail; <- alt alt syntax defualts to null
+  // Node tail; <- alt syntax defualts to null
 
-  // instatitate and insert a new node
+  // instantitate and insert a new node
   public void insert(int value) {
     Node newNode = new Node(value); // instantiate new node
 
