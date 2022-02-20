@@ -1,49 +1,40 @@
 package datastructures.linkedlist;
 
 import org.junit.jupiter.api.Test;
-import java.sql.SQLOutput;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.DisplayName;
 
 public class LinkedListTest
 {
-  @Test void testAMethod()
+  @DisplayName("instantiate an empty linked list")
+  @Test void instantiateALinkedList()
+    {
+      LinkedList linkedlist = new LinkedList();
+      System.out.println(linkedlist);
+      assertNull(null);
+
+    }
+  @DisplayName("insert a node")
+  @Test void insertANode()
   {
-    LinkedList sut = new LinkedList();
-    System.out.println(sut);
+    LinkedList linkedList = new LinkedList();
+    linkedList.insert(1);
+    System.out.println(linkedList);
     assertTrue(true);
   }
 
-  @Test void instantiateLinkedList(){
-    LinkedList newLinkedList = new LinkedList();
-    System.out.println(newLinkedList);
+  @DisplayName("insert multiple nodees")
+  @Test void insertMultipleNodes()
+  {
+    LinkedList linkedlist = new LinkedList();
+    linkedlist.insert(1);
+    linkedlist.insert(2);
+    linkedlist.insert(3);
+    System.out.println(linkedlist);
     assertTrue(true);
   }
 
-  @Test void insertNode(){
-    LinkedList newLinkedList = new LinkedList();
-    newLinkedList.insert(1);
-    System.out.println(newLinkedList.toString());
-    assertTrue(newLinkedList.head.value == 1);
-  }
-
-  @Test void insertMultipleNodes(){
-    LinkedList newLinkedList = new LinkedList();
-    newLinkedList.insert(1);
-    newLinkedList.insert(2);
-    newLinkedList.insert(3);
-    System.out.println(newLinkedList.toString());
-    assertTrue(true);
-  }
-
-  @Test void containsValue(){
-    LinkedList newLinkedList = new LinkedList();
-    newLinkedList.insert(100);
-    assertTrue(newLinkedList.includes(100));
-  }
-
-  @Test void doesNotContainValue(){
-    assertTrue(true);
-  }
 }
-
