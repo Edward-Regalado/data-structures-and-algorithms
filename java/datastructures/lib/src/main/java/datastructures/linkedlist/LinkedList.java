@@ -1,33 +1,35 @@
 package datastructures.linkedlist;
 
 public class LinkedList {
+
   // linked list fields are made up of type Node Class.
   Node head = null;
   Node tail = null;
-  // Node head; <- alt syntax defualts to null
-  // Node tail; <- alt syntax defualts to null
+//  int size = 0;
 
-  // instantitate and insert a new node
-  public void insert(int value) {
-    Node newNode = new Node(value); // instantiate new node
-
-    if (head != null) { //
-      newNode.next = head;
-    } else {
-      head = newNode;
+  // helper function
+  public int size() {
+    int size = 0;
+    Node current = head;
+    while (current != null) {
+      size++;
+      current = current.next;
     }
-
-    // if (head == null){
-    //     newNode = head;
-    // } else {
-    //   head = newNode.next;
-    // }
+    return size;
   }
 
+  // instantiate and insert a new node
+  public void insert(int value) {
+    Node newNode = new Node(value);
+    newNode.next = head;
+    head = newNode;
+  }
+
+  // check if value exist inside linked list
   public boolean includes(int value) {
     Node current = this.head;
-    while (current != null){
-      if(current.value == value){
+    while (current != null) {
+      if (current.value == value) {
         return true;
       }
       current = current.next;
@@ -36,15 +38,61 @@ public class LinkedList {
   }
 
   @Override
-  public String toString(){
-    String str = "";
+  public String toString() {
     Node current = head;
-    while(current != null) {
+    String str = "";
+    while (current != null) {
       str += "{ " + current.value + " } -> ";
-      // str += current.value;
       current = current.next;
     }
     str += "null";
     return str;
   }
+
+  public void append(int value) {
+    Node newNode = new Node(value);
+    if (head != null) {
+      Node current = head;
+      while (current.next != null) {
+        current = current.next;
+      }
+      current.next = newNode;
+    } else {
+      head = newNode;
+    }
+  }
+
+  public void insertBefore(int nextValue, int value) {
+    Node newNode = new Node(value);
+    Node current = head;
+//    if (current == null) {
+//      current = newNode;
+//      return;
+//    }
+    while (current.next != null) {
+      if (current.next.value == nextValue) {
+        newNode.next = current.next;
+        current.next = newNode;
+        current = newNode.next;
+      } else {
+        current = current.next;
+      }
+    }
+  }
+
+  public void insertAfter(int value, int newValue) {
+    Node newNode = new Node(newValue);
+    Node current = head;
+//    if (current == null){
+//      current = newNode;
+//    }
+    while(current.next != null){
+      if(current.next.value == value){
+        newNode.next = current.next;
+        current.next = newNode;
+      } else current = current.next;
+    }
+  }
 }
+
+
