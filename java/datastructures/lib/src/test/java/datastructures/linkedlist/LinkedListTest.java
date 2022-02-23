@@ -81,7 +81,20 @@ public class LinkedListTest {
     assertEquals("{ 5 } -> { 3 } -> { 2 } -> { 1 } -> null", linkedList.toString());
   }
 
+  @DisplayName("Kth value")
+  @Test
+  void findKthValue(){
+    LinkedList linkedList = new LinkedList();
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.kthValue(2);
+    assertTrue(true);
+    }
+
 }
+
 
 //  @DisplayName("insert after empty linked list")
 //  @Test
