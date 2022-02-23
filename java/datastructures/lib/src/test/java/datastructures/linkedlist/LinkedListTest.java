@@ -104,3 +104,7 @@ public class LinkedListTest {
 ////    System.out.println(linkedList.toString());
 //    assertEquals("{ 1 } -> null", linkedList.toString());
 //  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
