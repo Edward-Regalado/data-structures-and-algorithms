@@ -76,5 +76,3 @@
 ## Whiteboards
 
 ![Whiteboard... coming soon](/java/datastructures/lib/src/main/java/assets/linkedList.PNG)
-
-
