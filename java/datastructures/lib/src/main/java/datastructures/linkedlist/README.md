@@ -2,24 +2,36 @@
 
 - "A linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list."
 
-## Methods
+## Features
+
+### Node
+
+- Create a `Node` class that has properties for the value store in the Node, and a pointer to the next node.
+
+### Linked List
+
+- Create a Linked List class
+- Within your Linked List class, include a `head` property.
+  - Upon instantiation, an empty Linked List should be created.
+
+## Linked List Methods
 
 ### insert
 
 - Arguments: value
 - Returns: nothing
-- Adds a new node with that value to the head of the list with an O(1) Time performance.
+- Adds a new node with that value to the `head` of the list with `O(1)` time performance.
 
 ### includes
 
 - Arguments: value
 - Returns: Boolean
-- Indicates whether that value exists as a Node’s value somewhere within the list.
+  - Indicates whether that value exists as a Node’s value somewhere within the list.
 
 ### toString
 
 - Arguments: none
-- Returns: a string representing all the values in the Linked List, formatted as: "{ 1 } -> { 2 } -> { 3 } -> { 4 } -> null"
+- Returns: a string representing all the values in the Linked List, formatted as: `"{ 1 } -> { 2 } -> { 3 } -> { 4 } -> null"`
 
 ## Approach & Efficiency
 
