@@ -1,5 +1,7 @@
 package datastructures.linkedlist;
 
+// import javax.sound.sampled.SourceDataLine;
+
 public class LinkedList {
 
   // linked list fields are made up of type Node Class.
@@ -93,6 +95,26 @@ public class LinkedList {
       } else current = current.next;
     }
   }
-}
+
+  public void kthValue(int k){
+
+    int length = 0;
+    Node current = head;
+
+    while(current != null) {
+      current = head;
+      length++;
+    } if (length < k) {
+      System.out.println("The linked list does not have that many indexes");
+    }
+    current = head;
+    for (int i = 1; i < length - k + 1; i++){
+      current = current.next;
+    }
+    System.out.println("Kth Value: " + current);
+    }
+  }
+
+
 
 
