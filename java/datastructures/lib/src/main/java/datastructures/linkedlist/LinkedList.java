@@ -64,7 +64,7 @@ public class LinkedList {
     }
   }
 
-  public void insertBefore(int nextValue, int value) {
+  public void insertBefore(int beforeValue, int value) {
     Node newNode = new Node(value);
     Node current = head;
 //    if (current == null) {
@@ -72,7 +72,7 @@ public class LinkedList {
 //      return;
 //    }
     while (current.next != null) {
-      if (current.next.value == nextValue) {
+      if (current.next.value == beforeValue) {
         newNode.next = current.next;
         current.next = newNode;
         current = newNode.next;
@@ -82,8 +82,8 @@ public class LinkedList {
     }
   }
 
-  public void insertAfter(int value, int newValue) {
-    Node newNode = new Node(newValue);
+  public void insertAfter(int afterValue, int value) {
+    Node newNode = new Node(value);
     Node current = head;
 //    if (current == null){
 //      current = newNode;
@@ -114,7 +114,3 @@ public class LinkedList {
     System.out.println("Kth Value: " + current);
     }
   }
-
-
-
-
