@@ -1,4 +1,4 @@
-# Code Challenge: Array insert shift
+# Code Challenge: Array Insert Shift
 
 ## Specifications
 
