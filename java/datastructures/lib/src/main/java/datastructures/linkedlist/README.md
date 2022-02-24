@@ -33,6 +33,32 @@
 - Arguments: none
 - Returns: a string representing all the values in the Linked List, formatted as: `"{ 1 } -> { 2 } -> { 3 } -> { 4 } -> null"`
 
+### append
+
+- Arguments
+- Returns
+
+### insertBefore
+
+- Arguments
+- Returns
+
+### insertAfter
+
+- Arguments
+- Returns
+
+### kthValue
+
+- Arguments
+- Returns
+
+### zip
+
+- Arguments: Two Linked Lists
+- Returns: New Linked List zipped together
+
+
 ## Approach & Efficiency
 
 - `size()`
@@ -67,6 +93,10 @@
   - Time: O(n)
   - Space: O(1)
 
+- `.zip(linkedList, linkList)`
+  - Time: O(n)
+  - Space: O(n)
+
 ## API
 
 ### `.size()`
@@ -84,6 +114,8 @@
 ### `.insertAfter()`
 
 ### `kthValue()`
+
+### `zip()`
 
 ## Whiteboards
 
