@@ -64,6 +64,7 @@ public class LinkedList {
     }
   }
 
+  // need to refactor and write tests
   public void insertBefore(int beforeValue, int value) {
     Node newNode = new Node(value);
     Node current = head;
@@ -82,6 +83,7 @@ public class LinkedList {
     }
   }
 
+  // need to refactor and write tests
   public void insertAfter(int afterValue, int value) {
     Node newNode = new Node(value);
     Node current = head;
@@ -96,6 +98,7 @@ public class LinkedList {
     }
   }
 
+  // need to refactor and write tests
   public void kthValue(int k){
 
     int length = 0;
@@ -112,5 +115,23 @@ public class LinkedList {
       current = current.next;
     }
     System.out.println("Kth Value: " + current);
+    }
+
+    // not finished
+    public void zip(LinkedList listA, LinkedList listB) {
+
+      LinkedList zippedLinkedList = new LinkedList();
+      Node currentA = listA.head
+      Node currentB = listB.head
+
+    while (currentA != null and currentB != null){
+
+        // save node pointers
+        currentA = currentA.next
+        currentB = currentB.next
+
+        // work in progress...
+
+
     }
   }
