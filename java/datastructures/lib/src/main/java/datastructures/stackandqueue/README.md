@@ -68,7 +68,7 @@
 
 - Arguments: none
 - Returns: Boolean indicating whether or not the queue is empty
-You have access to the Node class and all the properties on the Linked List class.
+  You have access to the Node class and all the properties on the Linked List class.
 
 ## Structure and Testing
 
