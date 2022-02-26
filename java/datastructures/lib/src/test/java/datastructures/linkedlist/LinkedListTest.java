@@ -4,13 +4,15 @@ import org.junit.jupiter.api.Test;
 
 import org.junit.jupiter.api.DisplayName;
 
+import java.lang.reflect.Type;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LinkedListTest {
   @DisplayName("instantiate an empty linked list")
   @Test
   void instantiateALinkedList() {
-    LinkedList linkedlist = new LinkedList();
+    LinkedList<Type> linkedlist = new LinkedList<>();
     System.out.println(linkedlist);
     assertNull(null);
   }
@@ -18,7 +20,7 @@ public class LinkedListTest {
   @DisplayName("insert a node")
   @Test
   void insertANode() {
-    LinkedList linkedList = new LinkedList();
+    LinkedList<Type> linkedList = new LinkedList<>();
     linkedList.insert(1);
     System.out.println(linkedList);
     assertTrue(true);
@@ -27,7 +29,7 @@ public class LinkedListTest {
   @DisplayName("insert multiple nodes")
   @Test
   void insertMultipleNodes() {
-    LinkedList linkedlist = new LinkedList();
+    LinkedList<Type> linkedlist = new LinkedList<Type>();
     linkedlist.insert(1);
     linkedlist.insert(2);
     linkedlist.insert(3);
@@ -39,7 +41,7 @@ public class LinkedListTest {
   @DisplayName("string output")
   @Test
   void verifyStringOutput() {
-    LinkedList linkedList = new LinkedList();
+    LinkedList<Type> linkedList = new LinkedList<Type>();
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insert(3);
@@ -50,8 +52,8 @@ public class LinkedListTest {
   @DisplayName("includes a value")
   @Test
   void valueExistInLinkedList() {
-    LinkedList linkedlist = new LinkedList();
-    LinkedList linkedList = new LinkedList();
+    LinkedList<Type> linkedlist = new LinkedList();
+    LinkedList<Type> linkedList = new LinkedList<>();
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insert(3);
@@ -61,7 +63,7 @@ public class LinkedListTest {
   @DisplayName("append to end")
   @Test
   void addNodeToEndOfLinkedList() {
-    LinkedList linkedList = new LinkedList();
+    LinkedList linkedList = new LinkedList<>();
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.append(3);
@@ -71,7 +73,7 @@ public class LinkedListTest {
   @DisplayName("insert after")
   @Test
   void insertValueAfter() {
-    LinkedList linkedList = new LinkedList();
+    LinkedList<Type> linkedList = new LinkedList<Type>();
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insert(3);
@@ -84,7 +86,7 @@ public class LinkedListTest {
   @DisplayName("Kth value")
   @Test
   void findKthValue(){
-    LinkedList linkedList = new LinkedList();
+    LinkedList<Type> linkedList = new LinkedList<Type>();
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insert(3);

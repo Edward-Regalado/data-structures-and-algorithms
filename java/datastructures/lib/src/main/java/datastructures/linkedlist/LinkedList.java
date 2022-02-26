@@ -1,18 +1,18 @@
 package datastructures.linkedlist;
 
 // import javax.sound.sampled.SourceDataLine;
+import java.lang.reflect.Type;
 
-public class LinkedList {
+public class LinkedList<Type> {
 
   // linked list fields are made up of type Node Class.
-  Node head = null;
-  Node tail = null;
-//  int size = 0;
+  Node<Type> head = null;
+  Node<Type> tail = null;
 
   // helper function
   public int size() {
     int size = 0;
-    Node current = head;
+    Node<Type> current = head;
     while (current != null) {
       size++;
       current = current.next;
@@ -21,15 +21,15 @@ public class LinkedList {
   }
 
   // instantiate and insert a new node
-  public void insert(int value) {
-    Node newNode = new Node(value);
+  public void insert(Type value) {
+    Node<Type> newNode = new Node<>(value);
     newNode.next = head;
     head = newNode;
   }
 
   // check if value exist inside linked list
-  public boolean includes(int value) {
-    Node current = this.head;
+  public boolean includes(Type value) {
+    Node<Type> current = this.head;
     while (current != null) {
       if (current.value == value) {
         return true;
@@ -41,7 +41,7 @@ public class LinkedList {
 
   @Override
   public String toString() {
-    Node current = head;
+    Node<Type> current = head;
     String str = "";
     while (current != null) {
       str += "{ " + current.value + " } -> ";
@@ -51,10 +51,10 @@ public class LinkedList {
     return str;
   }
 
-  public void append(int value) {
-    Node newNode = new Node(value);
+  public void append(Type value) {
+    Node<Type> newNode = new Node<>(value);
     if (head != null) {
-      Node current = head;
+      Node<Type> current = head;
       while (current.next != null) {
         current = current.next;
       }
@@ -65,13 +65,13 @@ public class LinkedList {
   }
 
   // need to refactor and write tests
-  public void insertBefore(int beforeValue, int value) {
-    Node newNode = new Node(value);
-    Node current = head;
-//    if (current == null) {
-//      current = newNode;
-//      return;
-//    }
+  public void insertBefore(Type beforeValue, Type value) {
+    Node<Type> newNode = new Node<>(value);
+    Node<Type>current = head;
+    if (current == null) {
+      current = newNode;
+      return;
+    }
     while (current.next != null) {
       if (current.next.value == beforeValue) {
         newNode.next = current.next;
@@ -83,10 +83,10 @@ public class LinkedList {
     }
   }
 
-  // need to refactor and write tests
-  public void insertAfter(int afterValue, int value) {
-    Node newNode = new Node(value);
-    Node current = head;
+//   need to refactor and write tests
+  public void insertAfter(Type afterValue, Type value) {
+    Node<Type> newNode = new Node<>(value);
+    Node<Type> current = head;
 //    if (current == null){
 //      current = newNode;
 //    }
@@ -99,39 +99,37 @@ public class LinkedList {
   }
 
   // need to refactor and write tests
-  public void kthValue(int k){
+//  public void kthValue(Type k){
+//
+//    int length = 0;
+//    Node<Type> current = head;
+//
+//    while(current != null) {
+//      current = head;
+//      length++;
+//    } if (length < k) {
+//      System.out.println("The linked list does not have that many indexes");
+//    }
+//    current = head;
+//    for (int i = 1; i < length - k + 1; i++){
+//      current = current.next;
+//    }
+//    System.out.println("Kth Value: " + current);
+//    }
 
-    int length = 0;
-    Node current = head;
+//     not finished
+//    public void zip(LinkedList listA, LinkedList listB) {
+//
+//      LinkedList zippedLinkedList = new LinkedList();
+//      Node currentA = listA.head;
+//      Node currentB = listB.head;
+//
+//    while (currentA != null and currentB != null){
+//
+//        // save node pointers
+//        currentA = currentA.next;
+//        currentB = currentB.next;
+//
+//        // work in progress...
 
-    while(current != null) {
-      current = head;
-      length++;
-    } if (length < k) {
-      System.out.println("The linked list does not have that many indexes");
-    }
-    current = head;
-    for (int i = 1; i < length - k + 1; i++){
-      current = current.next;
-    }
-    System.out.println("Kth Value: " + current);
-    }
-
-    // not finished
-    public void zip(LinkedList listA, LinkedList listB) {
-
-      LinkedList zippedLinkedList = new LinkedList();
-      Node currentA = listA.head
-      Node currentB = listB.head
-
-    while (currentA != null and currentB != null){
-
-        // save node pointers
-        currentA = currentA.next
-        currentB = currentB.next
-
-        // work in progress...
-
-
-    }
   }
