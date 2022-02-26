@@ -12,3 +12,4 @@
 
 [Linked List](datastructures/lib/src/main/java/datastructures/linkedlist/README.md)
 
+[Stacks & Queues](datastructures/lib/src/main/java/datastructures/stack-and-queue/README.md)
