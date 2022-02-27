@@ -6,8 +6,8 @@ import java.lang.reflect.Type;
 public class LinkedList<Type> {
 
   // linked list fields are made up of type Node Class.
-  Node<Type> head = null;
-  Node<Type> tail = null;
+  public Node<Type> head = null;
+//  public Node<Type> tail = null;
 
   // helper function
   public int size() {
