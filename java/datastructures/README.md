@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-[Data Structures](lib/README.md)  
+[Data Structures](lib)  
 
 [Code Challenges](lib/README.md)
 
