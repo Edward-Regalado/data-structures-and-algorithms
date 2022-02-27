@@ -5,7 +5,7 @@ import java.lang.reflect.Type;
 
 public class LinkedList<Type> {
 
-  // linked list fields are made up of type Node Class.
+  // linked list fields are made up of type Node Class Object- this is a reference type object.
   public Node<Type> head = null;
 //  public Node<Type> tail = null;
 
@@ -116,20 +116,5 @@ public class LinkedList<Type> {
 //    }
 //    System.out.println("Kth Value: " + current);
 //    }
-
-//     not finished
-//    public void zip(LinkedList listA, LinkedList listB) {
-//
-//      LinkedList zippedLinkedList = new LinkedList();
-//      Node currentA = listA.head;
-//      Node currentB = listB.head;
-//
-//    while (currentA != null and currentB != null){
-//
-//        // save node pointers
-//        currentA = currentA.next;
-//        currentB = currentB.next;
-//
-//        // work in progress...
 
   }
