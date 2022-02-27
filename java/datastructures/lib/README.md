@@ -6,7 +6,7 @@
 
 [Queues](src/main/java/datastructures/queue)
 
-### Code Challenges
+# Code Challenges
 
 [Array Reverse](src/main/java/codechallenges/array-reverse)
 
