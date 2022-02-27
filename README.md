@@ -14,4 +14,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 [Python](/python/README.md)
 
-[Java](/java/README.md)
+[Java](/java/datastructures/README.md)
