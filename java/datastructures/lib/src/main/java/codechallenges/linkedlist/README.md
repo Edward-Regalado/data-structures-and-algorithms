@@ -29,7 +29,7 @@
 ## Time & Space Complexity
   - Time: O(n)
   - Space: O(1)
-  
+
 ## Whiteboard
 
 ![Whiteboard](../../assets/zippedLinkList.PNG)
