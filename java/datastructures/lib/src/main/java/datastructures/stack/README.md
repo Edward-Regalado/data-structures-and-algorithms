@@ -1,7 +1,6 @@
-# Implementation: Stacks and Queues
+# Implementation: Stacks
 
 - Stack is a container of objects that are inserted and removed according to the last-in first-out (LIFO) principle.
-- Queue is a container of objects (a linear collection) that are inserted and removed according to the first-in first-out (FIFO) principle.
 
 ## Features
 
@@ -38,37 +37,7 @@
 ### is empty
 
 - Arguments: none
-- Returns: Boolean indicating whether or not the stack is empty.
-
-## Queue
-
-- Create a Queue class that has a front property. It creates an empty Queue when instantiated.
-- This object should be aware of a default empty value assigned to front when the queue is created.
-- The class should contain the following methods:
-
-### enqueue
-
-- Arguments: value
-- adds a new node with that value to the back of the queue with an O(1) Time performance.
-
-### dequeue
-
-- Arguments: none
-- Returns: the value from node from the front of the queue
-- Removes the node from the front of the queue
-- Should raise exception when called on empty queue
-
-### peek
-
-- Arguments: none
-- Returns: Value of the node located at the front of the queue
-- Should raise exception when called on empty stack
-
-### is empty
-
-- Arguments: none
-- Returns: Boolean indicating whether or not the queue is empty
-  You have access to the Node class and all the properties on the Linked List class.
+- Returns: Boolean indicating whether the stack is empty.
 
 ## Structure and Testing
 
@@ -81,24 +50,32 @@
 5. Can successfully peek the next item on the stack
 6. Can successfully instantiate an empty stack
 7. Calling pop or peek on empty stack raises exception
-8. Can successfully enqueue into a queue
-9. Can successfully enqueue multiple values into a queue
-10. Can successfully dequeue out of a queue the expected value
-11. Can successfully peek into a queue, seeing the expected value
-12. Can successfully empty a queue after multiple dequeues
-13. Can successfully instantiate an empty queue
-14. Calling dequeue or peek on empty queue raises exception
-
-
-Documentation: Your README.md
-# Stacks and Queues
-<!-- Short summary or background information -->
-
-## Challenge
-<!-- Description of the challenge -->
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+- `.push(Type value)`
+  - pushes a value into the top of the stack
+  - **Big O**
+    - Time: O(1)
+    - Space: O(1)
+
+- `pop()`
+  - pops/removes the value at the top of the stack
+  - **Big O**
+    - Time: O(1)
+    - Space: O(1)
+
+- `.peek()`
+  - returns the value at the top of the stack
+  - **Big O**
+    - Time: O(1)
+    - Space: O(1)
+
+- `.isEmpty()`
+  - checks if the stack is empty
+  - **Big O**
+    - Time: O(1)
+    - Space: O(1)
 
 ## API
 <!-- Description of each method publicly available to your Stack and Queue-->

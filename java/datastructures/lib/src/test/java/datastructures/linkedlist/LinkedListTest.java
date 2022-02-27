@@ -20,7 +20,7 @@ public class LinkedListTest {
   @DisplayName("insert a node")
   @Test
   void insertANode() {
-    LinkedList<Type> linkedList = new LinkedList<>();
+    LinkedList<Integer> linkedList = new LinkedList<>();
     linkedList.insert(1);
     System.out.println(linkedList);
     assertTrue(true);
@@ -29,7 +29,7 @@ public class LinkedListTest {
   @DisplayName("insert multiple nodes")
   @Test
   void insertMultipleNodes() {
-    LinkedList<Type> linkedlist = new LinkedList<Type>();
+    LinkedList<Integer> linkedlist = new LinkedList<>();
     linkedlist.insert(1);
     linkedlist.insert(2);
     linkedlist.insert(3);
@@ -41,7 +41,7 @@ public class LinkedListTest {
   @DisplayName("string output")
   @Test
   void verifyStringOutput() {
-    LinkedList<Type> linkedList = new LinkedList<Type>();
+    LinkedList<Integer> linkedList = new LinkedList<>();
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insert(3);
@@ -52,8 +52,8 @@ public class LinkedListTest {
   @DisplayName("includes a value")
   @Test
   void valueExistInLinkedList() {
-    LinkedList<Type> linkedlist = new LinkedList();
-    LinkedList<Type> linkedList = new LinkedList<>();
+    LinkedList<Integer> linkedlist = new LinkedList<>();
+    LinkedList<Integer> linkedList = new LinkedList<>();
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insert(3);
@@ -63,7 +63,7 @@ public class LinkedListTest {
   @DisplayName("append to end")
   @Test
   void addNodeToEndOfLinkedList() {
-    LinkedList linkedList = new LinkedList<>();
+    LinkedList<Integer> linkedList = new LinkedList<>();
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.append(3);
@@ -73,7 +73,7 @@ public class LinkedListTest {
   @DisplayName("insert after")
   @Test
   void insertValueAfter() {
-    LinkedList<Type> linkedList = new LinkedList<Type>();
+    LinkedList<Integer> linkedList = new LinkedList<>();
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insert(3);
@@ -83,17 +83,17 @@ public class LinkedListTest {
     assertEquals("{ 5 } -> { 3 } -> { 2 } -> { 1 } -> null", linkedList.toString());
   }
 
-  @DisplayName("Kth value")
-  @Test
-  void findKthValue(){
-    LinkedList<Type> linkedList = new LinkedList<Type>();
-    linkedList.insert(1);
-    linkedList.insert(2);
-    linkedList.insert(3);
-    linkedList.insert(4);
-    linkedList.kthValue(2);
-    assertTrue(true);
-    }
+//  @DisplayName("Kth value")
+//  @Test
+//  void findKthValue(){
+//    LinkedList<Integer> linkedList = new LinkedList<>();
+//    linkedList.insert(1);
+//    linkedList.insert(2);
+//    linkedList.insert(3);
+//    linkedList.insert(4);
+//    linkedList.kthValue(2);
+//    assertTrue(true);
+//    }
 
 }
 
