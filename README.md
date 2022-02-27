@@ -12,6 +12,6 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ### 401 Data Structures, Code Challenges
 
-[Python](/python/README.md)
+[Python](/python)
 
 [Java](/java/datastructures)
