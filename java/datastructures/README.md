@@ -2,8 +2,8 @@
 
 ## Table of contents
 
-[Code Challenges](lib/README.md)
+[Data-structures](lib/README.md)  
 
-[Data-structures](lib/README.md)
+[Code Challenges](lib/README.md)
 
 [Whiteboards](lib/src/main/java/assets)
