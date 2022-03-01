@@ -22,3 +22,5 @@
 
 [Queue](src/main/java/codechallenges/queue)
 
+[Pseudo Queue](src/main/java/codechallenges/stack)
+
