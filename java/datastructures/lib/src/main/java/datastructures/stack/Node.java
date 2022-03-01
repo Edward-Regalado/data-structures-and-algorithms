@@ -2,7 +2,7 @@ package datastructures.stack;
 
 public class Node<Type>
 {
-  Type value;
+  public Type value;
   Node<Type> next;
 
   Node(Type value)
