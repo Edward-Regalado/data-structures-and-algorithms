@@ -121,4 +121,8 @@
 
 ![Whiteboard... coming soon](/java/datastructures/lib/src/main/java/assets/linkedList.PNG)
 
+### Collab & Credit
+
+- Tony Regalado and Josh McCluskey
+
 
