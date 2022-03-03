@@ -2,7 +2,7 @@ package codechallenges.stack;
 
 import datastructures.stack.Stack;
 
-public class pseudoQueue<Type> {
+public class PseudoQueue<Type> {
     Stack<Type> s1 = new Stack<>();
     Stack<Type> s2 = new Stack<>();
 
