@@ -1,7 +1,5 @@
 package codechallenges.stack;
 
-import datastructures.stack.Stack;
-import codechallenges.stack.pseudoQueue;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -12,14 +10,14 @@ class pesudoQueueTest {
   @Test
   @DisplayName("instantiate an empty stack")
   void instantiateApseudoQueue(){
-    pseudoQueue<Integer> pseudoQueue = new pseudoQueue<>();
+    PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
     System.out.println("empty pseudo " + pseudoQueue);
   }
 
   @Test
   @DisplayName("enqueue into pseudo queue")
   void enqueueIntoStack(){
-    pseudoQueue<Integer> pseudoQueue = new pseudoQueue<>();
+    PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
     pseudoQueue.enqueue(1);
     pseudoQueue.enqueue(2);
     System.out.println("pseudo queue: " + pseudoQueue);
@@ -29,7 +27,7 @@ class pesudoQueueTest {
   @Test
   @DisplayName("dequeue off stack one")
     void dequeueOffPseudoQueue() {
-    pseudoQueue<Integer> pseudoQueue = new pseudoQueue<>();
+    PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
     pseudoQueue.enqueue(1);
     pseudoQueue.enqueue(2);
     pseudoQueue.enqueue(3);
@@ -40,7 +38,7 @@ class pesudoQueueTest {
   @Test
   @DisplayName("dequeue entire stack")
     void dequeueEntireStack() {
-    pseudoQueue<Integer> pseudoQueue = new pseudoQueue<>();
+    PseudoQueue<Integer> pseudoQueue = new PseudoQueue<>();
     pseudoQueue.enqueue(1);
     pseudoQueue.enqueue(2);
     pseudoQueue.enqueue(3);
