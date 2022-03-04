@@ -24,3 +24,5 @@
 
 [Pseudo Queue](src/main/java/codechallenges/stack)
 
+[Validate Brackets](src/main/java/codechallenges/stack)  
+
