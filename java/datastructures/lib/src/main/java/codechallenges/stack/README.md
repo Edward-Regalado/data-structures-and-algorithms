@@ -54,6 +54,8 @@ Input	Output	Internal State
 - Curly Brackets : {}
 
 - Example
+-
+```
   Input	Output
   {}	TRUE
   {}(){}	TRUE
@@ -63,6 +65,8 @@ Input	Output	Internal State
   [({}]	FALSE
   (](	FALSE
   {(})	FALSE
+```
+
   Consider these small examples and why they fail.
 
 Input	Output	Why
@@ -71,4 +75,4 @@ Input	Output	Why
 [}	FALSE	error closing }. Doesn’t match opening (.
 
 ### Whiteboard
-![Brackets](../../assets/brackets.PNG)
+![Brackets](../../assets/validateBrackets.PNG)
