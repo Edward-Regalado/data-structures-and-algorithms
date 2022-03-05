@@ -14,46 +14,46 @@
 - Within your Linked List class, include a `head` property.
   - Upon instantiation, an empty Linked List should be created.
 
-## Linked List Methods
+### Methods
 
-### insert
+#### insert
 
 - Arguments: value
 - Returns: nothing
 - Adds a new node with that value to the `head` of the list with `O(1)` time performance.
 
-### includes
+#### includes
 
 - Arguments: value
 - Returns: Boolean
   - Indicates whether that value exists as a Node’s value somewhere within the list.
 
-### toString
+#### toString
 
 - Arguments: none
 - Returns: a string representing all the values in the Linked List, formatted as: `"{ 1 } -> { 2 } -> { 3 } -> { 4 } -> null"`
 
-### append
+#### append
 
 - Arguments
 - Returns
 
-### insertBefore
+#### insertBefore
 
 - Arguments
 - Returns
 
-### insertAfter
+#### insertAfter
 
 - Arguments
 - Returns
 
-### kthValue
+#### kthValue
 
 - Arguments
 - Returns
 
-### zip
+#### zip
 
 - Arguments: Two Linked Lists
 - Returns: New Linked List zipped together
