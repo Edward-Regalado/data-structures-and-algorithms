@@ -102,7 +102,7 @@ Class, with the following additional methods:
 
 ## Whiteboards
 
-[Trees](src/main/java/assets/trees.PNG)
+[Trees](../../main/java/assets/trees.PNG)
 
 ### Structure and Testing
 
