@@ -102,7 +102,7 @@ Class, with the following additional methods:
 
 ## Whiteboards
 
-[Trees](../../assets/trees.PNG)
+![Trees](../../assets/trees.PNG)
 
 ### Structure and Testing
 
