@@ -100,7 +100,7 @@ Class, with the following additional methods:
 - Spring:
 
 
-## Whiteboards
+## Whiteboard
 
 ![Trees](../../assets/binaryTree.PNG)
 
