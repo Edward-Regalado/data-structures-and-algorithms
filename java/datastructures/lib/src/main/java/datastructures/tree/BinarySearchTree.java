@@ -1,5 +1,7 @@
 package datastructures.tree;
 
+import java.util.ArrayList;
+
 public class BinarySearchTree<Type extends Comparable<? super Type>> extends BinaryTree<Type> {
 
   public Node<Type> add(Node<Type> currentNode, Type value) {
@@ -25,5 +27,6 @@ public class BinarySearchTree<Type extends Comparable<? super Type>> extends Bin
     if(value.compareTo(currentNode.value) < 0){return this.contains(value, currentNode.left);}
     return false;
   }
+
 }
 

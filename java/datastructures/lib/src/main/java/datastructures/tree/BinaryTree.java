@@ -1,6 +1,6 @@
 package datastructures.tree;
 
-
+import datastructures.queue.Queue;
 import java.util.ArrayList;
 
 
@@ -32,5 +32,16 @@ public class BinaryTree<Type> {
     value.add(node.value);
     return value;
   }
+
+  public ArrayList<Type> breadthFirst(){
+    System.out.println("work in progress");
+    return;
+  }
+
+  public Type max() {
+    System.out.println("working in progress");
+    return;
+  }
+
 }
 
