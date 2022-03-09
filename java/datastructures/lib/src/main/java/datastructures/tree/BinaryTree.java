@@ -1,44 +1,36 @@
 package datastructures.tree;
 
+
 import java.util.ArrayList;
-import java.util.NoSuchElementException;
 
-public class BinaryTree {
 
-//  ArrayList<Integer> elementsPre = new ArrayList<>();
-//  ArrayList<Integer> elementsIn = new ArrayList<>();
-  ArrayList<Integer> elements = new ArrayList<>();
+public class BinaryTree<Type> {
 
-  public ArrayList<Integer> preOrderTraversal(Node root){
-    if(root == null){
-      return elements;
-    }
-    elements.add(root.value);
-    preOrderTraversal(root.left);
-    preOrderTraversal(root.right);
-    System.out.println("preorder: " + elements);
-    return elements;
+  public Node<Type> root;
+
+
+  public ArrayList<Type> preOrderTraversal(Node<Type> node, ArrayList<Type> value){
+    if(root == null){ root = node; }
+    value.add(node.value);
+    if(node.left != null) {this.preOrderTraversal(node.left, value);}
+    if(node.right != null) {this.preOrderTraversal(node.right, value);}
+    return value;
   }
 
-  public ArrayList<Integer> inOrderTraversal(Node root){
-    if(root == null){
-//      System.out.println("empty tree");
-      throw new NullPointerException();
-    }
-    preOrderTraversal(root.left);
-    elements.add(root.value);
-    preOrderTraversal(root.right);
-    return elements;
+  public ArrayList<Type> inOrderTraversal(Node<Type> node, ArrayList<Type> value){
+    if(root == null){ root = node; }
+    if(node.left != null) {this.preOrderTraversal(node.left, value);}
+    value.add(node.value);
+    if(node.right != null) {this.preOrderTraversal(node.right, value);}
+    return value;
   }
 
-  public ArrayList<Integer> postOrderTraversal(Node root){
-    if(root == null){
-      return elements;
-    }
-    preOrderTraversal(root.left);
-    preOrderTraversal(root.right);
-    elements.add(root.value);
-    return elements;
+  public ArrayList<Type> postOrderTraversal(Node<Type> node, ArrayList<Type> value){
+    if(root == null){ root = node; }
+    if(node.left != null) {this.postOrderTraversal(node.left, value);}
+    if(node.right != null) {this.postOrderTraversal(node.right, value);}
+    value.add(node.value);
+    return value;
   }
-
 }
+
