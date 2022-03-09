@@ -43,7 +43,7 @@ Class, with the following additional methods:
 #### Contains
 
 - Argument: value
-- Returns: boolean indicating whether or not the value is in the tree at least once.
+- Returns: boolean indicating whether the value is in the tree at least once.
 
 ## Approach & Efficiency
 
@@ -124,3 +124,7 @@ Create a new branch called k-ary-tree, and, using the resources available to you
 ## Collabs and Credit
 
 - Hambalieu Jallow, Josh Mccluskey, Tony Regalado
+
+## Sources and References
+
+### [stackoverflow](https://stackoverflow.com/questions/61037306/why-can-i-not-use-compareto-when-comparing-the-key-of-a-a-node-in-a-bst-to-0)

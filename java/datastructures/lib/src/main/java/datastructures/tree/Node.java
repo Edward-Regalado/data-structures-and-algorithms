@@ -1,11 +1,11 @@
 package datastructures.tree;
 
-public class Node {
-  public int value;
-  public Node left;
-  public Node right;
+public class Node<Type> {
+  public Type value;
+  public Node<Type> left;
+  public Node<Type> right;
 
-  public Node(int value) {
+  public Node(Type value) {
     this.value = value;
 
   }
