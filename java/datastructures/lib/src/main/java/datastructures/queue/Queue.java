@@ -3,7 +3,7 @@ package datastructures.queue;
 public class Queue<Type>{
   Node<Type> front = null;
   Node<Type> rear = null;
-  
+
 
   public void enqueue(Type value) {
     Node<Type> newNode = new Node<>(value);
