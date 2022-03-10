@@ -3,10 +3,7 @@ package datastructures.queue;
 public class Queue<Type>{
   Node<Type> front = null;
   Node<Type> rear = null;
-
-  public Queue(){
-    // constructor
-  }
+  
 
   public void enqueue(Type value) {
     Node<Type> newNode = new Node<>(value);
@@ -36,6 +33,6 @@ public class Queue<Type>{
     } return this.front.value;
   }
 
-  boolean isEmpty(){
+ public boolean isEmpty(){
     return this.front == null;}
 }

@@ -1,6 +1,5 @@
 package datastructures.tree;
 
-import java.util.ArrayList;
 
 public class BinarySearchTree<Type extends Comparable<? super Type>> extends BinaryTree<Type> {
 
