@@ -14,4 +14,6 @@
 
 [Stacks](datastructures/lib/src/main/java/datastructures/stack/README.md)  
 
-[Queues](datastructures/lib/src/main/java/datastructures/queue/README.md)  
+[Queues](datastructures/lib/src/main/java/datastructures/queue/README.md)   
+
+[Tree](datastructures/lib/src/main/java/datastructures/tree/README.md) 
