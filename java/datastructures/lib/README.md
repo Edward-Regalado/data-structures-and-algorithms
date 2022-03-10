@@ -6,6 +6,8 @@
 
 [Queues](src/main/java/datastructures/queue)
 
+[Trees](src/main/java/datastructures/tree)
+
 # Code Challenges
 
 [Array Reverse](src/main/java/codechallenges/array-reverse)
