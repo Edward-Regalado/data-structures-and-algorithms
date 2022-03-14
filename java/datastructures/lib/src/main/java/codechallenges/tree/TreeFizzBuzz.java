@@ -3,7 +3,7 @@ package codechallenges.tree;
 public class TreeFizzBuzz {
 
 
-  public fizzBuzz(){
+  public void fizzBuzz(){
     System.out.println("work in progress");
   }
 }

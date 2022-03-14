@@ -62,5 +62,4 @@ public class LinkedListChallengesTest {
     System.out.println(zipped.zipList(linkedList1, linkedList2).toString());
     assertEquals("{ 1 } -> { 2 } -> null", zipped.zipList(linkedList1, linkedList2).toString());
   }
-
 }
