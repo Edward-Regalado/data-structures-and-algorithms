@@ -35,23 +35,27 @@
 
 #### append
 
-- Arguments
-- Returns
+- Arguments: new value
+- adds a new node with the given `value` to the end of the linked list
+- Returns: nothing
 
 #### insertBefore
 
-- Arguments
-- Returns
+- Arguments: target value, insert value
+- adds a new node with the given `value` immediately before the first node that has the target value specified 
+- Returns: nothing
 
 #### insertAfter
 
-- Arguments
-- Returns
+- Arguments: target value, insert value
+- adds a new node with the given `value` immediately after the frist node that has the target value specified
+- Returns: nothing
 
 #### kthValue
 
-- Arguments
-- Returns
+- Arguments: a number `k` as a parameter
+- Returns: the node's value that is `k` place from the tail of the linked list
+- You have access to the `Node` class and all the properties on the `Linked List` class as well as the methods in previous challenges
 
 #### zip
 
