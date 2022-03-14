@@ -110,7 +110,7 @@ class BinaryTreeTest {
 
   @Test
   @DisplayName("insert 3 string nodes")
-  void testIntantiateStrings() {
+  void testInstantiateStrings() {
     BinaryTree<String> tree = new BinaryTree<>();
     Node<String> n1 = new Node<>("a");
     Node<String> n2 = new Node<>("b");
@@ -123,5 +123,69 @@ class BinaryTreeTest {
     assertEquals("c", tree.root.right.value);
   }
 
+  @Test
+  @DisplayName("BFS Strings")
+  void testBreathFirstSearchStrings() {
+    BinaryTree<String> tree = new BinaryTree<>();
+    Node<String> n1 = new Node<>("a");
+    Node<String> n2 = new Node<>("b");
+    Node<String> n3 = new Node<>("c");
+    tree.root = n1;
+    tree.root.left = n2;
+    tree.root.right = n3;
+    System.out.println(tree.breadthFirst());
+  }
+
+  @Test
+  @DisplayName("BFS Integers")
+  void testBreathFirstSearchIntegers() {
+    BinaryTree<Integer> tree = new BinaryTree<>();
+    Node<Integer> n1 = new Node<>(1);
+    Node<Integer> n2 = new Node<>(2);
+    Node<Integer> n3 = new Node<>(3);
+    Node<Integer> n4 = new Node<>(4);
+    Node<Integer> n5 = new Node<>(5);
+    tree.root = n1;
+    tree.root.left = n2;
+    tree.root.right = n3;
+    tree.root.left.left = n4;
+    tree.root.left.right = n5;
+    System.out.println(tree.breadthFirst());
+  }
+
+  @Test
+  @DisplayName("find max value 1-5")
+  void testFindMaxValue() {
+    BinarySearchTree<Integer> bt = new BinarySearchTree<>();
+    bt.add(bt.root,1);
+    bt.add(bt.root,2);
+    bt.add(bt.root,3);
+    bt.add(bt.root,4);
+    bt.add(bt.root,5);
+    System.out.println("Max Value in your Tree is: " + bt.findMaxValue());
+    assertEquals(5, bt.findMaxValue());
+  }
+
+  @Test
+  @DisplayName("find max value 1-99")
+  void testFindMaxValueLarge() {
+    BinarySearchTree<Integer> bt = new BinarySearchTree<>();
+    bt.add(bt.root, 50);
+    bt.add(bt.root, 1);
+    bt.add(bt.root, 34);
+    bt.add(bt.root, 42);
+    bt.add(bt.root, 99);
+    System.out.println("Max Value in your Tree is: " + bt.findMaxValue());
+    assertEquals(99, bt.findMaxValue());
+  }
+
+  @Test
+  @DisplayName("find max value empty tree")
+  void testFindMaxValueEmptyTree(){
+    BinarySearchTree<Integer> bt = new BinarySearchTree<>();
+    assertThrows(IllegalArgumentException.class, bt::findMaxValue);
+  }
+
 }
+
 

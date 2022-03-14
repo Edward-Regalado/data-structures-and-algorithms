@@ -27,11 +27,20 @@
 
 - which returns an array of the values, ordered appropriately.
 
+#### breadth-first
 
-### Binary Search Tree
+- breadth
+
+#### Find Max Value
+
+- Arguments: none
+- Returns: Integer
+
+
+## Binary Search Tree
 
 - Create a Binary Search Tree class
-- This class should be a sub-class (or your languages equivalent) of the `Binary Tree`
+- This class should be a subclass (or your languages equivalent) of the `Binary Tree`
 Class, with the following additional methods:
 
 #### Add
@@ -59,6 +68,16 @@ Class, with the following additional methods:
   - Time:
   - Space:
 
+- `breadthFirst()`
+  - Time:
+  - Space:
+
+- `findMaxValue()`
+  - Time:
+  - Sapce;
+
+### Binary Search Tree Methods
+
 - `add()`
   - Time:
   - Space:
@@ -67,40 +86,7 @@ Class, with the following additional methods:
   - Time:
   - Spring:
 
-## API
-<!-- Description of each method publicly available in each of your trees -->
-
-### `preOrder()`
-- text here..
-- Time:
-- Space:
-
-### `inOrder()`
-
-- text...
-- Time:
-- Space:
-
-### `postOrder()`
-
-- text here..
-- Time:
-- Space:
-
-### `add()`
-
-- text..
-- Time:
-- Space:
-
-###`contains()`'
-
-- text..
-- Time:
-- Spring:
-
-
-## Whiteboard
+## Whiteboards
 
 ![Trees](../../assets/binaryTree.PNG)
 
@@ -121,7 +107,7 @@ Stretch Goal
 Create a new branch called k-ary-tree, and, using the resources available to you online, implement a k-ary tree, where each node can have any number of children.
 
 
-## Collabs and Credit
+## Collaborations and Credit
 
 - Hambalieu Jallow, Josh Mccluskey, Tony Regalado
 
