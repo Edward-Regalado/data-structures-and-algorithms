@@ -33,4 +33,3 @@ public class BinaryTree<Type> {
     return value;
   }
 }
-

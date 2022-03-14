@@ -63,6 +63,7 @@ public class LinkedListTest {
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insert(3);
+    System.out.println(linkedList);
     assertTrue(linkedList.includes(3));
   }
 
@@ -79,7 +80,7 @@ public class LinkedListTest {
 
   ////////// INSERT BEFORE /////////
   @Test
-  @DisplayName("insert before")
+  @DisplayName("insert before middle of linked list")
   void insertValueBefore() {
     LinkedList<Integer> linkedList = new LinkedList<>();
     linkedList.insert(5);
@@ -92,7 +93,7 @@ public class LinkedListTest {
   }
 
   @Test
-  @DisplayName("insert before target at head")
+  @DisplayName("insert before head node")
   void insertBeforeTargetValueAtHead() {
     LinkedList<Integer> linkedList = new LinkedList<>();
     linkedList.insert(2);
@@ -115,14 +116,14 @@ public class LinkedListTest {
   }
 
   @Test
-  @DisplayName("insert before target value not in list")
+  @DisplayName("insert before- target value not in list")
   void insertBeforeTargetValueNotInList() {
     LinkedList<Integer> linkedList = new LinkedList<>();
     linkedList.insert(1);
     linkedList.insert(2);
     linkedList.insert(3);
     System.out.println(linkedList);
-//    assertThrows(IllegalArgumentException.class, () -> linkedList.insertBefore(5, 4));
+    assertThrows(IllegalArgumentException.class, () -> linkedList.insertBefore(5, 4));
   }
 
   @Test
@@ -176,39 +177,7 @@ public class LinkedListTest {
     linkedList.insert(3);
     assertThrows(IllegalArgumentException.class, () -> linkedList.insertAfter(1, 2));
   }
-
-  //  @Test
-//  @DisplayName("target value not in linked list")
-//  void targetValueNotInLinkedList() {
-//    LinkedList<Integer> linkedList = new LinkedList<>();
-//    linkedList.insert(1);
-//    assertThrows(IllegalArgumentException.class, () -> linkedList.insertAfter(2, 3));
-//  }
-
-
-//  @Test
-//  @DisplayName("insert after invalid")
-//  void insertValueAfterInvalid() {
-//    LinkedList<Integer> linkedList = new LinkedList<>();
-//    linkedList.insert(1);
-//    linkedList.insert(2);
-//    linkedList.insert(3);
-//    linkedList.insert(5);
-//    linkedList.insertAfter(6, 4);
-////    System.out.println(linkedList.toString());
-//    assertEquals("{ 5 } -> { 3 } -> { 2 } -> { 1 } -> null", linkedList.toString());
-//  }
-
-  //  @DisplayName("insert after empty linked list")
-//  @Test
-//  void insertAfterEmptyLinkedList() {
-//    LinkedList linkedList = new LinkedList();
-//    linkedList.insertAfter(2, 1);
-////    System.out.println(linkedList.toString());
-//    assertEquals("{ 1 } -> null", linkedList.toString());
-//
-
-
+  
   ////////// KTH VALUE FROM THE END ////////////
   @Test
   @DisplayName("kth value from the end")

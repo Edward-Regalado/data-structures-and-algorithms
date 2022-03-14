@@ -54,25 +54,25 @@ public class LinkedList<Type> {
       if (current.next.value == targetValue) {
         newNode.next = current.next;
         current.next = newNode;
-        ;
         break;
-      } else current = current.next;
+      } current = current.next;
+      if (current.next == null) throw new IllegalArgumentException("target value not in list");
     }
-//    throw new IllegalArgumentException("target value not in list");
   }
 
   ////////// INSERT AFTER ////////////
   public void insertAfter(Type targetValue, Type insertValue) {
     Node<Type> newNode = new Node<>(insertValue);
     Node<Type> current = head;
-
+    if (current == null){
+      throw new IllegalArgumentException("empty list");
+    }
     while (current != null) {
       if (current.value == targetValue) {
         newNode.next = current.next;
         current.next = newNode;
         break;
-      }
-      current = current.next;
+      } else current = current.next;
     }
     if (current == null) throw new IllegalArgumentException("target value not in list");
   }
@@ -123,51 +123,4 @@ public class LinkedList<Type> {
   }
 }
 
-
-//  ////////// INSERT BEFORE /////////////
-//  public void insertBefore(Type targetValue, Type insertValue) {
-//    Node<Type> newNode = new Node<>(insertValue);
-//    Node<Type> current = head;
-//    if (current == null) {
-//      throw new IllegalArgumentException("empty list");
-//    }
-//    if (current.value == targetValue) {
-//      insert(insertValue);
-//    }
-//    while (current.next != null) {
-//      if (current.next.value == targetValue) {
-//        newNode.next = current.next;
-//        current.next = newNode;;
-//        break;
-//      } else current = current.next;
-//    } if (current.next == null) throw new IllegalArgumentException("not in list");
-//  }
-
-
-//  ////////// INSERT AFTER ////////////
-//  public void insertAfter(Type targetValue, Type insertValue) {
-//    Node<Type> newNode = new Node<>(insertValue);
-//    Node<Type> current = head;
-//
-//    while (current != null) {
-//      if (current.value == targetValue) {
-//        newNode.next = current.next;
-//        current.next = newNode;
-//        break;
-//      }
-////      if (current.next.value == targetValue) {
-////        current.next.next = newNode;
-//////        newNode.next = current.next;
-//////        current = current.next;
-////        current.next = newNode;
-////        break;
-////      }
-//      current = current.next ;
-//    }
-////    if (current == null) { // check if we have a valid linked list with nodes
-////      throw new IllegalArgumentException("linked list is empty");
-////    } else if (current.value == targetValue) { // check if the current node (head) value is our target
-////      append(insertValue);
-//  }
-////    else throw new IllegalArgumentException(targetValue + " is not in the linked list");
 
