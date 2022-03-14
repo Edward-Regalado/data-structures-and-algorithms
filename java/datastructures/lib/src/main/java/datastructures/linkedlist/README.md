@@ -42,7 +42,7 @@
 #### insertBefore
 
 - Arguments: target value, insert value
-- adds a new node with the given `value` immediately before the first node that has the target value specified 
+- adds a new node with the given `value` immediately before the first node that has the target value specified
 - Returns: nothing
 
 #### insertAfter
@@ -123,7 +123,7 @@
 
 ## Whiteboards
 
-![Whiteboard... coming soon](/java/datastructures/lib/src/main/java/assets/linkedList.PNG)
+![Whiteboard](../../assets/linkedListAppendBeforeAfter.PNG)
 
 ### Collab & Credit
 
