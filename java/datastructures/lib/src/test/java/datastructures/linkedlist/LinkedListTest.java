@@ -177,7 +177,7 @@ public class LinkedListTest {
     linkedList.insert(3);
     assertThrows(IllegalArgumentException.class, () -> linkedList.insertAfter(1, 2));
   }
-  
+
   ////////// KTH VALUE FROM THE END ////////////
   @Test
   @DisplayName("kth value from the end")
