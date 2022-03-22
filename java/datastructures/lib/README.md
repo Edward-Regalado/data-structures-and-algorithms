@@ -8,6 +8,8 @@
 
 [Trees](src/main/java/datastructures/tree)
 
+[Sort](src/main/java/datastructures/sorting)
+
 # Code Challenges
 
 [Array Reverse](src/main/java/codechallenges/array-reverse)
@@ -27,4 +29,3 @@
 [Pseudo Queue](src/main/java/codechallenges/stack)
 
 [Validate Brackets](src/main/java/codechallenges/stack)
-
