@@ -17,3 +17,5 @@
 [Queues](datastructures/lib/src/main/java/datastructures/queue)   
 
 [Tree](datastructures/lib/src/main/java/datastructures/tree) 
+
+[Sort](datastructures/lib/src/main/java/datastructures/sorting) 
