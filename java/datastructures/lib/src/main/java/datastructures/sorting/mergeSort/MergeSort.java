@@ -4,7 +4,10 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    public static int[] mergeSort(int[] arr){
+    public int[] mergeSort(int[] arr){
+      if(arr.length == 0){
+        throw new IllegalArgumentException("empty array!");
+      }
       int n = arr.length;
       if(n > 1){
         int mid = n/2;
@@ -17,7 +20,7 @@ public class MergeSort {
       return arr;
     }
 
-  public static int[] merge(int[] left, int[] right, int[] arr){
+  public int[] merge(int[] left, int[] right, int[] arr){
     int i = 0;
     int j = 0;
     int k = 0;
