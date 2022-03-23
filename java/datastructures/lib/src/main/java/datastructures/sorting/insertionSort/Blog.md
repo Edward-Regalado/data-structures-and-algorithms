@@ -1,6 +1,4 @@
-# Sort
-
-## Insertion Sort
+# Insertion Sort
 
 - Insertion sort works similarly to sorting a deck of cards
 - We can assume the first card is already sorted, then we select another card and compare the value
