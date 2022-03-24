@@ -2,7 +2,7 @@ package datastructures.sorting.quickSort;
 
 public class QuickSort {
 
-  public static int[] quickSort(int[] arr, int left, int right){
+  public int[] quickSort(int[] arr, int left, int right){
     int position;
     if(arr.length == 0){
       throw new IllegalArgumentException("empty array!");
