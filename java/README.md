@@ -12,10 +12,12 @@
 
 [Linked List](datastructures/lib/src/main/java/datastructures/linkedlist)
 
-[Stacks](datastructures/lib/src/main/java/datastructures/stack)  
+[Stacks](datastructures/lib/src/main/java/datastructures/stack)
 
-[Queues](datastructures/lib/src/main/java/datastructures/queue)   
+[Queues](datastructures/lib/src/main/java/datastructures/queue)
 
-[Tree](datastructures/lib/src/main/java/datastructures/tree) 
+[Tree](datastructures/lib/src/main/java/datastructures/tree)
 
-[Sort](datastructures/lib/src/main/java/datastructures/sorting) 
+[Sort](datastructures/lib/src/main/java/datastructures/sorting)
+
+[HashTable](datastructures/lib/src/main/java/datastructures/hashtable)
