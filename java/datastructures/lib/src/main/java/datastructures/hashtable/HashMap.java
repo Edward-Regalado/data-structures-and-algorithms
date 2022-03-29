@@ -49,7 +49,7 @@ public class HashMap<K, V>
     LinkedList<HashMapPair<K, V>> linkedList = bucketArrayList.get(hash);
     for (HashMapPair<K, V> current : linkedList)
     {
-      if(current.getKey() == key)
+      if(current.getKey().equals(key))
       {
         return current.getValue();
       }
@@ -73,9 +73,17 @@ public class HashMap<K, V>
 
   public List<K> keys()
   {
-    // TODO: implement me
-    return null;
+    List<K> keyList = new ArrayList<>();
+    for(LinkedList<HashMapPair<K, V>> linkedList : bucketArrayList)
+    {
+      for (HashMapPair<K, V> pair : linkedList )
+      {
+        keyList.add(pair.getKey());
+      }
+    }
+    return keyList;
   }
+
 
   // Sometimes hashCode in Java can be negative! So we need to do absolute value
   // If you really want to hash things yourself, look at https://stackoverflow.com/a/113600/16889809
