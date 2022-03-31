@@ -1,6 +1,7 @@
 package datastructures.hashtable;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -60,6 +61,8 @@ public class HashMap<K, V>
   public boolean contains(K key)
   {
     int hash = hash(key);
+
+    Hashtable<Integer, String> ht = new Hashtable<>();
     LinkedList<HashMapPair<K, V>> linkedList = bucketArrayList.get(hash);
     for (HashMapPair<K, V> current : linkedList)
     {
@@ -94,5 +97,7 @@ public class HashMap<K, V>
   {
     return Math.abs(key.hashCode()) % size;
   }
+
+
 }
 
