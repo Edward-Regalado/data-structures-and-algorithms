@@ -10,6 +10,8 @@
 
 [Sort](src/main/java/datastructures/sorting)
 
+[Graph](src/main/java/datastructures/graph)
+
 # Code Challenges
 
 [Array Reverse](src/main/java/codechallenges/array-reverse)
