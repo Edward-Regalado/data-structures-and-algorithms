@@ -43,6 +43,11 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
     return null;
   }
 
+  public List<Edge<T>> breadthFirst()
+  {
+    return null;
+  }
+
   public int size()
   {
     return numberOfVertices;  // TODO: make sure this gets updated at the right times

@@ -39,6 +39,12 @@ Challenge Type: New Implementation
 - Returns a collection of edges connected to the given node
 - Include the weight of the connection in the returned collection
 
+#### breadth first
+
+- Arguments: None
+- Returns: A collections of nodes in the order they were visited
+- Display the collection
+
 #### size
 
 - Arguments: none
@@ -59,6 +65,10 @@ Challenge Type: New Implementation
   - Space:
 
 - `getNeighnors()`
+  - Time:
+  - Space:
+
+- `breadthFirst()`
   - Time:
   - Space:
 
