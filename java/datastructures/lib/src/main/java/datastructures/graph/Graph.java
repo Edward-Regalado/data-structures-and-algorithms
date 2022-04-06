@@ -1,24 +1,32 @@
 package datastructures.graph;
 
-import datastructures.hashtable.HashMap;
-import datastructures.linkedlist.LinkedList;
+import datastructures.queue.Queue;
+import java.util.*;
 
-import java.util.List;
-
-public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<T>>  // just in case you have Comparable data structures
+public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<T>>
 {
-  public HashMap<Vertex<T>, LinkedList<Edge<T>>> adjacencyLists;
+  public LinkedHashMap<Vertex<T>, LinkedList<Edge<T>>> adjacencyLists;
   private int numberOfVertices = 0;
 
-  public Graph(int maxNumberOfVertices)
+  public Graph()
   {
-    adjacencyLists = new HashMap<>(maxNumberOfVertices);
+    adjacencyLists = new LinkedHashMap<>();
   }
 
-  public Vertex<T> addVertex(T value)  // addNode()
+  public Graph(int numberOfVertices)
   {
-    // TODO: implement me
-    return null;
+    adjacencyLists = new LinkedHashMap<>(numberOfVertices);
+  }
+
+  public Vertex<T> addVertex(T value)
+  {
+    Vertex<T> vertex = new Vertex<>(value);
+    if(adjacencyLists.get(vertex) == null)
+    {
+    adjacencyLists.put(vertex, new LinkedList<>());
+    numberOfVertices++;
+    }
+    return vertex;
   }
 
   public void addEdge(Vertex<T> start, Vertex<T> destination)
@@ -28,24 +36,60 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
 
   public void addEdge(Vertex<T> start, Vertex<T> destination, int weight)
   {
-    // TODO: implement me
+    Edge<T> edge = new Edge<>(destination, weight);
+    if (adjacencyLists.get(start) == null)
+    {
+      LinkedList<Edge<T>> linkedList = new LinkedList<>();
+      linkedList.add(edge);
+      adjacencyLists.put(start, linkedList);
+    } else
+    {
+      LinkedList<Edge<T>> linkedList = adjacencyLists.get(start);
+      linkedList.add(edge);
+      adjacencyLists.put(start, linkedList);
+    }
   }
 
-  public LinkedList<Vertex<T>> getVertices()  // getNodes()
+  public List<Vertex<T>> getVertices()
   {
-    // TODO: implement me
-    return null;
+    return new ArrayList<>(adjacencyLists.keySet());
   }
 
-  public LinkedList<Edge<T>> getNeighbors(Vertex<T> vertex)
+  public List<Edge<T>> getNeighbors(Vertex<T> vertex)
   {
-    // TODO: implement me
-    return null;
+    LinkedList<Edge<T>> linkedList = adjacencyLists.get(vertex);
+    return new ArrayList<>(linkedList);
+  }
+
+  public List<Vertex<T>> breadthFirst(Vertex<T> startVertex)
+  {
+    List<Vertex<T>> list = new ArrayList<>();
+    Queue<Vertex<T>> queue = new Queue<>();
+    HashSet<T> visited = new HashSet<>();
+
+    visited.add(startVertex.value);
+    queue.enqueue(startVertex);
+    while(!queue.isEmpty())
+    {
+      Vertex<T> front = queue.dequeue();
+      list.add(front);
+      List<Edge<T>> edgeList = getNeighbors(front);
+      for(Edge<T> edge : edgeList)
+      {
+        Vertex<T> neighborVertices = edge.destination;
+        if(!visited.contains(neighborVertices.value))
+        {
+          queue.enqueue(neighborVertices);
+          visited.add(neighborVertices.value);
+        }
+      }
+    }
+    return list;
   }
 
   public int size()
   {
-    return numberOfVertices;  // TODO: make sure this gets updated at the right times
+    return numberOfVertices;
   }
 
   @Override
@@ -57,11 +101,19 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
   @Override
   public String toString()
   {
-    // Good for testing
-    // WARNING: Your HashMap does not guarantee ordering!
-    // But you can basically rely on it if you add nodes to your graphs in a consistent way
-
-    return "";
+    StringBuilder graphString = new StringBuilder();
+    Set<Vertex<T>> vertices = adjacencyLists.keySet();
+    for (Vertex<T> vertex : vertices)
+    {
+      List<Edge<T>> adjacencyList = adjacencyLists.get(vertex);
+      graphString.append(vertex.value.toString()).append(": ");
+      for(Edge<T> edge : adjacencyList)
+      {
+        graphString.append(edge.destination.value).append("(weight ").append(edge.weight).append(") -> ");
+      }
+      graphString.append("null\n");
+    }
+    return graphString.toString();
   }
 }
 

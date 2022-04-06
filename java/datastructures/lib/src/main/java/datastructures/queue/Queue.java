@@ -1,12 +1,12 @@
 package datastructures.queue;
 
-public class Queue<Type>{
-  Node<Type> front = null;
-  Node<Type> rear = null;
+public class Queue<T>{
+  Node<T> front = null;
+  Node<T> rear = null;
 
 
-  public void enqueue(Type value) {
-    Node<Type> newNode = new Node<>(value);
+  public void enqueue(T value) {
+    Node<T> newNode = new Node<>(value);
     if (this.front == null) {
       this.front = newNode;
     } else {
@@ -15,8 +15,8 @@ public class Queue<Type>{
     this.rear = newNode;
   }
 
-  public Type dequeue() {
-    Type node;
+  public T dequeue() {
+    T node;
     if(this.isEmpty()){
      throw new IllegalArgumentException("Queue is empty");
    }
@@ -27,7 +27,7 @@ public class Queue<Type>{
    } return node;
   }
 
-  public Type peek() {
+  public T peek() {
     if(this.isEmpty()) {
       throw new IllegalArgumentException("Queue is empty");
     } return this.front.value;
