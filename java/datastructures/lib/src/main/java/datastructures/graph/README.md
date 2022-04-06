@@ -77,7 +77,7 @@
 - Arguments: node
 - Returns a collection of edges connected to the given vertex
   - Include the weight of the connection in the returned collection
-
+  
 ```
 public List<Edge<T>> getNeighbors(Vertex<T> vertex)
   {
@@ -148,6 +148,10 @@ public List<Edge<T>> getNeighbors(Vertex<T> vertex)
 - `getNeighnors()`
   - Time: O(1)
   - Space: O(1)
+
+- `breadthFirst()`
+  - Time:
+  - Space:
 
 - `size()`
   - Time: O(1)
