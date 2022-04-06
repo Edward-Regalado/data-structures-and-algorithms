@@ -21,3 +21,5 @@
 [Sort](datastructures/lib/src/main/java/datastructures/sorting)
 
 [HashTable](datastructures/lib/src/main/java/datastructures/hashtable)
+
+[Graph](datastructures/lib/src/main/java/datastructures/graph)
