@@ -77,7 +77,7 @@
 - Arguments: node
 - Returns a collection of edges connected to the given vertex
   - Include the weight of the connection in the returned collection
-  
+
 ```
 public List<Edge<T>> getNeighbors(Vertex<T> vertex)
   {
@@ -131,6 +131,16 @@ public List<Edge<T>> getNeighbors(Vertex<T> vertex)
     return list;
   }
 ```
+
+#### depthFirst(Vertex<T> startVertex)
+
+- Argument: Vertex startVertex
+- Return: A collection of vertices in their pre-order depth-first-search traversal order
+- Display the collection
+
+```
+ WORK IN PROGRESS...
+```
 ## Approach & Efficiency
 
 - `addNode()`
@@ -161,9 +171,16 @@ public List<Edge<T>> getNeighbors(Vertex<T> vertex)
   - Time: O(n)
   - Space: O(n)
 
+- `depthFirst()`
+  - Time:
+  - Space:
+
 ### Whiteboards
 
-![WhiteBoard](../../assets/graphBreadthFirst.PNG)
+![Breadth First](../../assets/graphBreadthFirst.PNG)
+
+![Depth First (Work-in-progress)]()
+
 
 ### Sources
 
