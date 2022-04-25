@@ -31,3 +31,5 @@
 [Pseudo Queue](src/main/java/codechallenges/stack)
 
 [Validate Brackets](src/main/java/codechallenges/stack)
+
+[Repeated Word](src/main/java/codechallenges/repeatedWord)
