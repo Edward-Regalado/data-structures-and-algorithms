@@ -1,17 +1,24 @@
 package codechallenges.repeatedWord;
 
-import datastructures.hashtable.HashMap;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class RepeatedWord {
-
-    public String repeatedWord(String string )
-    {
-//      String [] words = string.replaceAll("[^a-zA-Z]", "").toLowerCase().split("\\s+");
-//      HashMap<String, String> hashMap = new HashMap<String, String>();
-//      for (String word : words)
-//      {
-//        return word;
-//      }
-      return null;
+  public String repeatedWord(String string) {
+    String result = "";
+    String trimmed = string.replace(",", "").toLowerCase();
+    String[] wordsArray = trimmed.split(" ");
+    HashMap<String, Integer> hashMap = new LinkedHashMap<>();
+    for (String word : wordsArray) {
+      if (hashMap.get(word) != null)
+      {
+        hashMap.put(word, hashMap.get(word) + 1);
+        result = word;
+        return result;
+      } else {
+        hashMap.put(word, 1);
+      }
     }
+    return result;
+  }
 }

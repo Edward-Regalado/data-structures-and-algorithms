@@ -2,25 +2,44 @@
 
 - Find the first repeated word in a book.
 
-## Challenge Setup & Execution
-
-- Branch Name: hashmap-repeated-word
-
-Challenge Type: Code Challenge / Algorithm
-
 ### Feature Tasks
 
 - Write a function called repeated word that finds the first word to occur more than once in a string
   - Arguments: string
   - Return: string
 
-### Structure and Testing
+### Approach & Efficiency
 
-- Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
+`repeatedWord()`
+  - pass in string containing words as an arg
+  - remove all comas, convert to lowerCase and split string - save to wordArray
+  - for each word in the wordArray, check if word exist in hashMap, if so return the word
+  - else add the new word to hashMap
+  - return empty string
+  -
+### Code
 
-- Write at least three test assertions for each method that you define.
+```
+public class RepeatedWord {
+  public String repeatedWord(String string) {
+    String result = "";
+    String trimmed = string.replace(",", "").toLowerCase();
+    String[] wordsArray = trimmed.split(" ");
+    HashMap<String, Integer> hashMap = new LinkedHashMap<>();
+    for (String word : wordsArray) {
+      if (hashMap.get(word) != null)
+      {
+        hashMap.put(word, hashMap.get(word) + 1);
+        result = word;
+        return result;
+      } else {
+        hashMap.put(word, 1);
+      }
+    }
+    return result;
+  }
 
-- Ensure your tests are passing before you submit your solution.
+```
 
 ### Example
 
@@ -32,3 +51,8 @@ Challenge Type: Code Challenge / Algorithm
 
 - Input: `"It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York..."`
 - Output: `"summer"`
+
+
+### Whiteboard
+
+![Repeated Word](../../assets/repeatedWord.png)
