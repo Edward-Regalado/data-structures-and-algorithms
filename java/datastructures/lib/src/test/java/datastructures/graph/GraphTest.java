@@ -164,4 +164,106 @@ class GraphTest {
     graph.addEdge(v1, v5, 3);
     assertEquals("[100, 200, 300, 400, 500]", graph.breadthFirst(v1).toString());
   }
+
+  // Depth First Search
+  @Test
+  @DisplayName("depth first search integers")
+  void depthFirstSearchIntegers()
+  {
+    Graph<Integer> graph = new Graph<>();
+
+    Vertex<Integer> v1 = graph.addVertex(100);
+    Vertex<Integer> v2 = graph.addVertex(200);
+    Vertex<Integer> v3 = graph.addVertex(300);
+    Vertex<Integer> v4 = graph.addVertex(400);
+    Vertex<Integer> v5 = graph.addVertex(500);
+    Vertex<Integer> v6 = graph.addVertex(600);
+    Vertex<Integer> v7 = graph.addVertex(700);
+
+    graph.addEdge(v1, v2, 2);
+    graph.addEdge(v2, v1, 2);
+    graph.addEdge(v1, v3, 6);
+    graph.addEdge(v1, v4, 5);
+    graph.addEdge(v1, v5, 3);
+    graph.addEdge(v5, v6, 10);
+    graph.addEdge(v6, v7, 9);
+
+    assertEquals("[100, 500, 600, 700, 400, 300, 200]", graph.depthFirst(v1).toString());
+  }
+
+  @Test
+  @DisplayName("depth first search strings")
+  void depthFirstSearchString()
+  {
+    Graph<String> graph = new Graph<>();
+
+    Vertex<String> va = graph.addVertex("A");
+    Vertex<String> vb = graph.addVertex("B");
+    Vertex<String> vc = graph.addVertex("C");
+    Vertex<String> vd = graph.addVertex("D");
+    Vertex<String> ve = graph.addVertex("E");
+    Vertex<String> vh = graph.addVertex("H");
+    Vertex<String> vf = graph.addVertex("F");
+    Vertex<String> vg = graph.addVertex("G");
+
+    graph.addEdge(va, vb, 2);
+    graph.addEdge(va, vd, 2);
+    graph.addEdge(vb, vc, 6);
+    graph.addEdge(vb, vd, 6);
+    graph.addEdge(vc, vg, 5);
+    graph.addEdge(vd, ve, 3);
+    graph.addEdge(vd, vh, 10);
+    graph.addEdge(vd, vf, 9);
+
+    assertEquals("[A, D, F, H, E, B, C, G]", graph.depthFirst(va).toString());
+  }
+
+  @Test
+  @DisplayName("depth first search straight line edge")
+  void depthFirstSearchStraightLine()
+  {
+    Graph<String> graph = new Graph<>();
+
+    Vertex<String> va = graph.addVertex("A");
+    Vertex<String> vb = graph.addVertex("B");
+    Vertex<String> vc = graph.addVertex("C");
+    Vertex<String> vd = graph.addVertex("D");
+    Vertex<String> ve = graph.addVertex("E");
+    Vertex<String> vh = graph.addVertex("H");
+    Vertex<String> vf = graph.addVertex("F");
+    Vertex<String> vg = graph.addVertex("G");
+
+    graph.addEdge(va, vb, 2);
+    graph.addEdge(vb, vc, 2);
+    graph.addEdge(vc, vd, 6);
+    graph.addEdge(vd, ve, 6);
+    graph.addEdge(ve, vf, 5);
+    graph.addEdge(vf, vg, 3);
+    graph.addEdge(vg, vh, 10);
+
+    assertEquals("[A, B, C, D, E, F, G, H]", graph.depthFirst(va).toString());
+  }
+
+  @Test
+  @DisplayName("depth first search single vertex")
+  void depthFirstSearchSingleVertex() {
+    Graph<String> graph = new Graph<>();
+
+    Vertex<String> va = graph.addVertex("A");
+
+    assertEquals("[A]", graph.depthFirst(va).toString());
+  }
+
+  @Test
+  @DisplayName("depth first search single edge")
+  void depthFirstSearchSingleEdge() {
+    Graph<String> graph = new Graph<>();
+
+    Vertex<String> va = graph.addVertex("A");
+    Vertex<String> vb = graph.addVertex("B");
+
+    graph.addEdge(va, vb);
+
+    assertEquals("[A, B]", graph.depthFirst(va).toString());
+  }
 }

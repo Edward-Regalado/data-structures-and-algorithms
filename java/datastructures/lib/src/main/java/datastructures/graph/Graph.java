@@ -87,9 +87,31 @@ public class Graph<T extends Comparable<? super T>> implements Comparable<Graph<
     return list;
   }
 
-  public List<Edge<T>> depthFirst()
+  public List<Vertex<T>> depthFirst(Vertex<T> startVertex)
   {
-    return null;
+    List<Vertex<T>> list = new ArrayList<>();
+    Stack<Vertex<T>> stack = new Stack<>();
+    HashMap<Vertex<T>, Integer> visited = new HashMap<>();
+    stack.push(startVertex);
+    while(!stack.isEmpty()) {
+      Vertex<T> current = stack.peek();
+      stack.pop();
+      if(!visited.containsKey(current))
+      {
+        list.add(current);
+        visited.put(current, 0);
+      }
+      List<Edge<T>> edgeList = getNeighbors(current);
+      for(Edge<T> edge: edgeList)
+      {
+        Vertex<T> neighbors = edge.destination;
+        if(!visited.containsKey(neighbors))
+        {
+          stack.push(neighbors);
+        }
+      }
+    }
+    return list;
   }
 
   public int size()

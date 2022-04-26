@@ -139,7 +139,30 @@ public List<Edge<T>> getNeighbors(Vertex<T> vertex)
 - Display the collection
 
 ```
- WORK IN PROGRESS...
+ public List<Vertex<T>> depthFirst(Vertex<T> startVertex)
+  {
+    List<Vertex<T>> list = new ArrayList<>();
+    Stack<Vertex<T>> stack = new Stack<>();
+    HashMap<Vertex<T>, Integer> visited = new HashMap<>();
+    stack.push(startVertex);
+    while(!stack.isEmpty()) {
+      Vertex<T> current = stack.pop();
+      if(!visited.containsKey(current))
+      {
+        list.add(current);
+        visited.put(current, 0);
+      }
+      List<Edge<T>> edgeList = getNeighbors(current);
+      for(Edge<T> edge: edgeList)
+      {
+        Vertex<T> neighbors = edge.destination;
+        if(!visited.containsKey(neighbors))
+        {
+          stack.push(neighbors);
+        }
+      }
+    }
+    return list;
 ```
 ## Approach & Efficiency
 
@@ -172,15 +195,14 @@ public List<Edge<T>> getNeighbors(Vertex<T> vertex)
   - Space: O(n)
 
 - `depthFirst()`
-  - Time:
-  - Space:
+  - Time: O(n)
+  - Space: O(n)
 
 ### Whiteboards
 
 ![Breadth First](../../assets/graphBreadthFirst.PNG)
 
-![Depth First (Work-in-progress)]()
-
+![Depth First](../../assets/grpahdfs.PNG)
 
 ### Sources
 
