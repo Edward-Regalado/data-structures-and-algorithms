@@ -4,7 +4,7 @@
 
 ### Table of Contents
 
-[Array Reverse](./code-challenges/array-reverse/)
+[Array Reverse](./code-challenges/array-reverse/)  
 [Insert Array Shift](./code-challenges/insert-array-shift/)
 
 
