@@ -5,6 +5,7 @@
 ### Table of Contents
 
 [Array Reverse](./code-challenges/array-reverse/)
+[Insert Array Shift](./code-challenges/insert-array-shift/)
 
 
 ### Folder and Challenge Setup
@@ -88,3 +89,6 @@ From the root of the `data-structures-and-algorithms` folder, execute the follow
 #### Live Tests
 
 Note that when you check your code into GitHub, all of your tests will automatically execute. These results should match your own, and will be found on the  **Actions** tab
+
+
+Today I spent a bit more time reading up on  async and await keywords. Using async when defining a function means that it returns a promise. A promise is essentially the eventual completion (or failure) of an asynchronous operation without blocking the execution thread. The await keyword is used before a Promise and can only be used inside an async block of code. It stops/pause the execution of an asynchronous function until the Promise is resolved. Javascript does not wait for the promise to resolve and continues to execute further. Once the promise in resolved, the callback function is invoked.
