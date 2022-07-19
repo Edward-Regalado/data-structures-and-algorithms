@@ -23,7 +23,7 @@ Input: `[1, 2, 3, 5, 6, 7], 4`  Output: `-1`
   - If true, assign the `start` to equal `mid + 1`, thus getting rid of the entire left half of the input array
 - If both of those checks are false, we default to the last logic in the while loop
   - assign the `end` variable to equal `mid - 1`, thus getting rid of the entire right half of the input array
-- continue until `input value` is equal to the value at midpoint index of the input array
+- continue until `input value` is equal to the value at midpoint index of the input array and `return mid`
 - If the value is not present, we will eventually break out of the `while loop` and return `false` or `-1`
 
 ### Big O notation
