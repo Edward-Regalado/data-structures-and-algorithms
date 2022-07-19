@@ -19,7 +19,7 @@ Input: `[1, 2, 3, 5, 6, 7], 4`  Output: `-1`
 - Enter a while loop that remains true as long as `start <= end`.
 - check if the input value is equal to the value at midpoint index of the input array
   - If true, `return mid`
-- check if input value is greater than the input value at midpoint of the input array
+- check if input value is greater than the value at midpoint of the input array
   - If true, assign the `start` to equal `mid + 1`, thus getting rid of the entire left half of the input array
 - If both of those checks are false, we default to the last logic in the while loop
   - assign the `end` variable to equal `mid - 1`, thus getting rid of the entire right half of the input array
