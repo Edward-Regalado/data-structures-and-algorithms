@@ -31,4 +31,6 @@ Input: `[1, 2, 3, 5, 6, 7], 4`  Output: `-1`
 - Time: O(log N) - the algorithm takes an additional step each time the data doubles.
 - Space: O(1) - we're just returning `boolean` or `-1`, so our space in memory will remain constant.
 
+### Whiteboard
+
 ![Whiteboard](../assets/arrayBinarySearch.PNG)
