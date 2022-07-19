@@ -4,9 +4,9 @@
 
 ### Table of Contents
 
-[Array Reverse](./code-challenges/array-reverse/)
-[Insert Array Shift](./code-challenges/insert-array-shift/)
-[Array Binary Search](./code-challenges/array-binary-search/)
+[Array Reverse](./code-challenges/array-reverse/)  
+[Insert Array Shift](./code-challenges/insert-array-shift/)  
+[Array Binary Search](./code-challenges/array-binary-search/)  
 
 
 
