@@ -4,11 +4,10 @@
 
 ### Table of Contents
 
-[Array Reverse](./code-challenges/array-reverse/)  
-[Insert Array Shift](./code-challenges/insert-array-shift/)  
-[Array Binary Search](./code-challenges/array-binary-search/)  
-
-
+1. [Array Reverse](./code-challenges/array-reverse/)
+2. [Insert Array Shift](./code-challenges/insert-array-shift/)
+3. [Array Binary Search](./code-challenges/array-binary-search/)
+4. [Linked List](./code-challenges/linked-list/)
 
 ### Folder and Challenge Setup
 
