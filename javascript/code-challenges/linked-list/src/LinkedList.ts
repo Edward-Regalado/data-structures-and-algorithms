@@ -33,7 +33,7 @@ export class LinkedList<T> implements Collection<T> {
     let current = this.head;
     let str = '';
     while (current != undefined){
-      str += `{ ${display(current.data) } -> `;
+      str += `{ ${display(current.data)} } -> `;
       current = current.next;
     };
     str += "NULL";
