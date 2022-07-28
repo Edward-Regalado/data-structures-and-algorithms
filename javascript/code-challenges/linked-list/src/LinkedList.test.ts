@@ -25,16 +25,16 @@ describe("linked list", () => {
 
   });
 
-  // it("the head property will point to the first node in the linked list", () => {
-  //   const myLinkedList: Collection<number> = new LinkedList<number>();
+  it("the head property will point to the first node in the linked list", () => {
+    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
 
-  //   myLinkedList.insert(10);
-  //   myLinkedList.insert(5);
-  //   myLinkedList.insert(2);
-  //   myLinkedList.insert(1);
+    linkedListOfStrings.insert('tail');
+    linkedListOfStrings.insert('node3');
+    linkedListOfStrings.insert('node2');
+    linkedListOfStrings.insert('head');
 
-  //   expect(myLinkedList).toBe(1);
-  // });
+    expect(linkedListOfStrings.toString()).toEqual("{ head } -> { node2 } -> { node3 } -> { tail } -> NULL");
+  });
 
   it("can properly insert multiple nodes into the linked list", () => {
     const linkedListOfNumbers: Collection<number> = new LinkedList<number>();
