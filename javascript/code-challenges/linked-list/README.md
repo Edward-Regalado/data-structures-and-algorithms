@@ -33,19 +33,49 @@
 - Arguments: none
 - Returns: a string representing all the values in the Linked List, formatted as: `"{ a } -> { b } -> { c } -> null"`
 
+#### append
+
+- Arguments: value
+- Returns: nothing
+- Adds a new node with that value to the `tail` of the list with `O(1)` time performance.
+
+#### insertBefore
+
+- Arguments: value, new value
+- Returns: nothing
+- Adds a new node with the given new value immediately before the first node that has the value specified
+
+#### insertAfter
+
+- Arguments: none
+- Returns: nothing
+- Adds a new node with the given new value immediately after the node that has the value specified
+
 ## Approach & Efficiency
 
-- `.insert(int value)`
+- `.insert(value)`
   - Time: O(n)
   - Space: O(1)
 
-- `.includes(int value)`
+- `.includes(value)`
   - Time: O(n)
   - Space: O(1)
 
 - `.toString()`
   - Time: O(n)
   - Space: O(n)
+
+  - `.append(value)`
+  - Time: O(1)
+  - Space: O(1)
+
+- `.insertBefore(target value, value)`
+  - Time: O(n)
+  - Space: O(1)
+
+- `.insertAfter(target value, value)`
+  - Time: O(n)
+  - Space: O(1)
 
 ## API
 
@@ -58,9 +88,18 @@
 - `.toString()`
   - displays a string representation of the linked list
 
+- `.append(value)`
+  - inserts a new node to the end of the linked list
+
+- `.insertBefore(target, value)`
+  - inserts a new node immediately before the target value
+
+- `.insertAfter(target, value)`
+  - inserts a new node immediately after the target value
+
 ### Collaboration
 
-- Martha and Sarah
+- Martha Q., Zayah L., Sarah T., Luis S.
 
 ### Whiteboard
 
