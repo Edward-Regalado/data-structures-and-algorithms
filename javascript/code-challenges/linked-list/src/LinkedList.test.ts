@@ -99,6 +99,88 @@ describe("linked list", () => {
     expect(linkedListOfStrings.toString()).toEqual(
       "{ c } -> { b } -> { a } -> NULL"
     );
+
   });
 
+  it("should return the size of the linked list", () => {
+    const linkedListOfStrings: Collection<number> = new LinkedList<number>();
+
+    linkedListOfStrings.insert(1);
+    linkedListOfStrings.insert(2);
+    linkedListOfStrings.insert(3);
+
+    expect(linkedListOfStrings.size()).toEqual(3);
+  });
+
+  it("returns kth from the end of the linked list", () => {
+    const linkedListOfNumbers: Collection<number> = new LinkedList<number>();
+
+    linkedListOfNumbers.insert(10);
+    linkedListOfNumbers.insert(8);
+    linkedListOfNumbers.insert(4);
+    linkedListOfNumbers.insert(2);
+    linkedListOfNumbers.insert(23);
+
+    expect(linkedListOfNumbers.kthFromEnd(4)).toEqual(2);
+  });
+
+  it("returns error when kth is greater than our linked list", () => {
+    const linkedListOfNumbers: Collection<number> = new LinkedList<number>();
+
+    linkedListOfNumbers.insert(10);
+    linkedListOfNumbers.insert(8);
+    linkedListOfNumbers.insert(4);
+
+    expect(() => linkedListOfNumbers.kthFromEnd(14)).toThrowError("error");
+    expect(() => linkedListOfNumbers.kthFromEnd(10)).toThrow("error");
+  });
+
+  it("returns when k is the same length as the linked list", () => {
+    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+
+    linkedListOfStrings.insert('a');
+    linkedListOfStrings.insert('b');
+    linkedListOfStrings.insert('c');
+    linkedListOfStrings.insert('d');
+    linkedListOfStrings.insert('e');
+
+    expect(linkedListOfStrings.kthFromEnd(5)).toBe("e");
+  });
+
+  it("returns an error is k is a negative number", () => {
+    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+
+    linkedListOfStrings.insert('a');
+    linkedListOfStrings.insert('b');
+    linkedListOfStrings.insert('c');
+    linkedListOfStrings.insert('d');
+    linkedListOfStrings.insert('e');
+
+    expect(() => linkedListOfStrings.kthFromEnd(-5)).toThrowError("error");
+  });
+
+  it("returns when linked list of size only has one node", () => {
+    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+
+    linkedListOfStrings.insert('a');
+
+    expect(linkedListOfStrings.kthFromEnd(1)).toBe('a');
+  });
+
+  it("happy path", () => {
+    const linkedListOfNumbers: Collection<number> = new LinkedList<number>();
+
+    linkedListOfNumbers.insert(6);
+    linkedListOfNumbers.insert(33);
+    linkedListOfNumbers.insert(500);
+    linkedListOfNumbers.insert(78);
+    linkedListOfNumbers.insert(43);
+
+    expect(linkedListOfNumbers.kthFromEnd(1)).toBe(6);
+    expect(linkedListOfNumbers.kthFromEnd(2)).toBe(33);
+    expect(linkedListOfNumbers.kthFromEnd(3)).toBe(500);
+    expect(linkedListOfNumbers.kthFromEnd(4)).toBe(78);
+    expect(linkedListOfNumbers.kthFromEnd(5)).toBe(43);
+  });
 });
+
