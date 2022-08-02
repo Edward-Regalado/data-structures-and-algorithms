@@ -9,6 +9,7 @@ export class LinkedList<T> implements Collection<T> {
 
   head: Node<T> | undefined;
   tail: Node<T> | undefined;
+  // size: number;
 
 
   insert(value: T): void {
@@ -81,6 +82,7 @@ export class LinkedList<T> implements Collection<T> {
         current.next = newNode;
         break;
       }
+      // move to the next node
       current = current.next;
     }
     if(current.next === undefined){
@@ -112,4 +114,34 @@ export class LinkedList<T> implements Collection<T> {
     }
   }
 
+  kthFromEnd(target: number): any {
+    let size = this.size();
+    let current = this.head;
+
+    // edge cases out of range or negative k value
+    if (target > size || target < 0) {
+      throw new Error("error");
+    }
+
+    // reset to the head node
+    current = this.head;
+    while(target <= size){
+
+      let len = size - target;
+      for(let i = 0; i < len; i++) {
+          current = current?.next;
+      }
+      return current?.data;
+    }
+  };
+
+  size(): number {
+    let counter = 0;
+    let current = this.head;
+    while(current != undefined) {
+      counter++;
+      current = current.next;
+    }
+    return counter;
+  }
 };
