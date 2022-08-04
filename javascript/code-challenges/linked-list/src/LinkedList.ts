@@ -13,14 +13,15 @@ export class LinkedList<T> implements Collection<T> {
 
 
   insert(value: T): void {
+    let current = this.head;
     let newNode: Node<T> = {
       data: value,
       next: this.head,
     };
-    newNode.next = this.head;
+    newNode.next = current;
     this.head = newNode;
     if(this.tail === undefined) {
-      this.tail = newNode;
+        this.tail = current;
     }
   }
 
@@ -48,21 +49,22 @@ export class LinkedList<T> implements Collection<T> {
 
   append(value: T): void {
     let tail = this.tail;
-
     if(tail != undefined){
       let newNode = {
-        data: value,
-        next: undefined
+            data: value,
+            next: undefined
       };
       tail.next = newNode;
-      tail = newNode;
-    } else {
-      this.insert(value);
+      this.tail = newNode;
     }
+      else{
+        this.insert(value);
+      }
   };
 
   insertBefore(target: T, value: T): void {
     let current = this.head;
+    // let size = this.size();
     let newNode: Node<T> = {
       data: value,
       next: this.head,
@@ -73,20 +75,20 @@ export class LinkedList<T> implements Collection<T> {
     }
     if(current.data === target){
       this.insert(value);
+      return;
     }
-    // traverse through linked list as long as current.next is not undefined
-    while(current.next != undefined){
-      // check if the next node's data is equal to the value
+
+    while (current.next != undefined){
       if(current.next.data === target){
         newNode.next = current.next;
         current.next = newNode;
         break;
+      } else {
+        current = current.next;
       }
-      // move to the next node
-      current = current.next;
     }
     if(current.next === undefined){
-      throw new Error("The target value not in linked list");
+      throw new Error("The target value not in the linked list");
     }
   };
 
@@ -110,7 +112,7 @@ export class LinkedList<T> implements Collection<T> {
       }
     }
     if(current === undefined){
-      throw new Error("The target value is not in linked list");
+      throw new Error("The target value is not in the linked list");
     }
   }
 
@@ -122,9 +124,7 @@ export class LinkedList<T> implements Collection<T> {
     if (target > size || target < 0) {
       throw new Error("error");
     }
-
-    // reset to the head node
-    current = this.head;
+    
     while(target <= size){
 
       let len = size - target;
