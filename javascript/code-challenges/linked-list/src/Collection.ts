@@ -4,6 +4,9 @@ export interface Collection<T> {
   insert(t: T): void;
   includes(t: T): boolean;
   toString(): string;
+  insertAfter(t: T, value: T): void;
+  insertBefore(t: T, value: T): void;
+  append(t: T): void;
 }
 
 export function display(t: any): string {
@@ -13,9 +16,3 @@ export function display(t: any): string {
   return `${t}`;
 }
 
-// export function size(t: any): number {
-//   if(t?.size){
-//     return t.size();
-//   }
-//   return `${t}`;
-// }

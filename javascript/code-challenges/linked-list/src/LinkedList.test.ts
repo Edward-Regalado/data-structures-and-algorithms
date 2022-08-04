@@ -1,7 +1,10 @@
 import { Collection } from "./Collection";
 import { LinkedList } from "./LinkedList";
 
+
 describe("linked list", () => {
+
+//////////////// INSERT, INCLUDES, TOSTRING ///////////////////////
   it("instantiate a new linked list", () => {
     const linkedListOfStrings: Collection<string> = new LinkedList<string>();
 
@@ -112,6 +115,146 @@ describe("linked list", () => {
     expect(linkedListOfStrings.size()).toEqual(3);
   });
 
+  //////////////// APPEND ///////////////////////
+  it("should append a single node to the end of the linked list", () => {
+    const linkedList: Collection<number> = new LinkedList<number>();
+
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.insert(5);
+    linkedList.append(100);
+
+    const str = linkedList.toString()
+    expect(str).toEqual(
+      "{ 5 } -> { 4 } -> { 3 } -> { 2 } -> { 1 } -> { 100 } -> NULL"
+    );
+  });
+
+  it("should append a multiple nodes to the end of the linked list", () => {
+    const linkedList: Collection<number> = new LinkedList<number>();
+
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.insert(5);
+    linkedList.append(100);
+    linkedList.append(200);
+    linkedList.append(300);
+    linkedList.append(400);
+
+    const str = linkedList.toString()
+    expect(str).toEqual(
+      "{ 5 } -> { 4 } -> { 3 } -> { 2 } -> { 1 } -> { 100 } -> { 200 } -> { 300 } -> { 400 } -> NULL"
+    );
+  });
+
+  it("should append a multiple nodes single to the end of the linked list", () => {
+    const linkedList: Collection<number> = new LinkedList<number>();
+
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.insert(5);
+    linkedList.append(100);
+
+    const str = linkedList.toString()
+    expect(str).toEqual(
+      "{ 5 } -> { 4 } -> { 3 } -> { 2 } -> { 1 } -> { 100 } -> NULL"
+    );
+  });
+
+  /////////////// INSERT_BEFORE //////////////////
+  it("should insert before the target node", () => {
+    const linkedList: Collection<number> = new LinkedList<number>();
+
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.insert(5);
+    linkedList.insertBefore(2, 100);
+
+    const str = linkedList.toString()
+    expect(str).toEqual(
+      "{ 5 } -> { 4 } -> { 3 } -> { 100 } -> { 2 } -> { 1 } -> NULL"
+    );
+  });
+
+  it("should insert before the target node with only two nodes in the linked list", () => {
+    const linkedList: Collection<number> = new LinkedList<number>();
+
+    linkedList.insert(1);
+    linkedList.insert(2);
+
+    linkedList.insertBefore(1, 100);
+
+    const str = linkedList.toString()
+    expect(str).toEqual(
+      "{ 2 } -> { 100 } -> { 1 } -> NULL"
+    );
+  });
+
+  it("should insert before the target node with only one node in the linked list", () => {
+    const linkedList: Collection<number> = new LinkedList<number>();
+
+    linkedList.insert(1);
+    linkedList.insertBefore(1, 100);
+
+    const str = linkedList.toString()
+    expect(str).toEqual("{ 100 } -> { 1 } -> NULL"
+    );
+  });
+
+
+  //////////////////////// INSERT_AFTER ////////////////////////
+  it("should insert after the target node", () => {
+    const linkedList: Collection<number> = new LinkedList<number>();
+
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insert(3);
+    linkedList.insert(4);
+    linkedList.insert(5);
+    linkedList.insertAfter(3, 100);
+
+    const str = linkedList.toString()
+    expect(str).toEqual(
+      "{ 5 } -> { 4 } -> { 3 } -> { 100 } -> { 2 } -> { 1 } -> NULL"
+    );
+  });
+
+  it("should insert after the target node with only two nodes in the linked list", () => {
+    const linkedList: Collection<number> = new LinkedList<number>();
+
+    linkedList.insert(1);
+    linkedList.insert(2);
+    linkedList.insertAfter(1, 100);
+
+    const str = linkedList.toString()
+    expect(str).toEqual(
+      "{ 2 } -> { 1 } -> { 100 } -> NULL"
+    );
+  });
+
+  it("should insert after the target node with only one node in the linked list", () => {
+    const linkedList: Collection<number> = new LinkedList<number>();
+
+    linkedList.insert(1);
+
+    linkedList.insertAfter(1, 100);
+
+    const str = linkedList.toString()
+    expect(str).toEqual(
+      "{ 1 } -> { 100 } -> NULL"
+    );
+  });
+
+  ///////////////// KTH FROM THE END ////////////////////////
+
   it("returns kth from the end of the linked list", () => {
     const linkedListOfNumbers: Collection<number> = new LinkedList<number>();
 
@@ -182,5 +325,6 @@ describe("linked list", () => {
     expect(linkedListOfNumbers.kthFromEnd(4)).toBe(78);
     expect(linkedListOfNumbers.kthFromEnd(5)).toBe(43);
   });
+
 });
 
