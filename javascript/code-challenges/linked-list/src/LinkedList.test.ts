@@ -431,5 +431,20 @@ describe("linked list", () => {
 
     expect(() => LinkedList.zipList(ll1, ll2)).toThrow("both linked lists are empty");
   });
+
+  it("zips two linked lists with different data types", () => {
+    const ll1: LinkedList<number> = new LinkedList<number>();
+    const ll2: LinkedList<string> = new LinkedList<string>();
+
+    ll1.insert(3);
+    ll1.insert(2);
+    ll1.insert(1);
+    ll2.insert('c');
+    ll2.insert('b');
+    ll2.insert('a');
+
+    const str = LinkedList.zipList(ll1, ll2).toString()
+    expect(str).toBe("{ 1 } -> { a } -> { 2 } -> { b } -> { 3 } -> { c } -> NULL");
+  });
 });
 
