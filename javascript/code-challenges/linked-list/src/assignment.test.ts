@@ -3,7 +3,7 @@ import { LinkedList } from "./LinkedList";
 
 describe("LinkedList", () => {
   it("checks if an item is included", () => {
-    const list: Collection<string> = new LinkedList<string>();
+    const list: LinkedList<string> = new LinkedList<string>();
 
     list.insert("Frodo");
     list.insert("Sam");
@@ -23,7 +23,7 @@ describe("LinkedList", () => {
   }
 
   it("creates a string for objects", () => {
-    const list: Collection<Hobbit> = new LinkedList<Hobbit>();
+    const list: LinkedList<Hobbit> = new LinkedList<Hobbit>();
 
     list.insert(new Hobbit("Pippin"));
     list.insert(new Hobbit("Merry"));

@@ -2,7 +2,7 @@ import { LinkedList } from "./LinkedList";
 
 describe("Linked List", () => {
   it("can append an element", () => {
-    const list = new LinkedList<string>();
+    const list: LinkedList<string> = new LinkedList<string>();
 
     list.insert("Frodo");
     list.insert("Sam");
@@ -16,7 +16,7 @@ describe("Linked List", () => {
   });
 
   it("can insert before an element", () => {
-    const list = new LinkedList<string>();
+    const list: LinkedList<string> = new LinkedList<string>();
 
     list.insert("Frodo");
     list.insert("Sam");
@@ -29,7 +29,7 @@ describe("Linked List", () => {
   });
 
   it("can insert after an element", () => {
-    const list = new LinkedList<string>();
+    const list: LinkedList<string> = new LinkedList<string>();
 
     list.insert("Frodo");
     list.insert("Sam");
