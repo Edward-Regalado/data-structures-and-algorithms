@@ -6,14 +6,14 @@ describe("linked list", () => {
 
 //////////////// INSERT, INCLUDES, TOSTRING ///////////////////////
   it("instantiate a new linked list", () => {
-    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+    const linkedListOfStrings: LinkedList<string> = new LinkedList<string>();
 
     expect(linkedListOfStrings).toBeDefined();
 
   });
 
   it("can properly insert into linked list", () => {
-    const linkedListOfNumbers: Collection<number> = new LinkedList<number>();
+    const linkedListOfNumbers: LinkedList<number> = new LinkedList<number>();
 
     linkedListOfNumbers.insert(10);
     linkedListOfNumbers.insert(5);
@@ -29,7 +29,7 @@ describe("linked list", () => {
   });
 
   it("the head property will point to the first node in the linked list", () => {
-    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+    const linkedListOfStrings: LinkedList<string> = new LinkedList<string>();
 
     linkedListOfStrings.insert('tail');
     linkedListOfStrings.insert('node3');
@@ -40,7 +40,7 @@ describe("linked list", () => {
   });
 
   it("can properly insert multiple nodes into the linked list", () => {
-    const linkedListOfNumbers: Collection<number> = new LinkedList<number>();
+    const linkedListOfNumbers: LinkedList<number> = new LinkedList<number>();
 
     linkedListOfNumbers.insert(6);
     linkedListOfNumbers.insert(5);
@@ -60,7 +60,7 @@ describe("linked list", () => {
   });
 
   it("will return true when finding a value within the linked list that exists", () => {
-    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+    const linkedListOfStrings: LinkedList<string> = new LinkedList<string>();
 
     linkedListOfStrings.insert('a');
     linkedListOfStrings.insert('b');
@@ -76,7 +76,7 @@ describe("linked list", () => {
   });
 
   it("will return false when searching for a value in the link list does not exist", () => {
-    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+    const linkedListOfStrings: LinkedList<string> = new LinkedList<string>();
 
     linkedListOfStrings.insert('a');
     linkedListOfStrings.insert('b');
@@ -93,7 +93,7 @@ describe("linked list", () => {
   });
 
   it("can properly return a collection of all the values that exist in the linked list", () => {
-    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+    const linkedListOfStrings: LinkedList<string> = new LinkedList<string>();
 
     linkedListOfStrings.insert('a');
     linkedListOfStrings.insert('b');
@@ -106,7 +106,7 @@ describe("linked list", () => {
   });
 
   it("should return the size of the linked list", () => {
-    const linkedListOfStrings: Collection<number> = new LinkedList<number>();
+    const linkedListOfStrings: LinkedList<number> = new LinkedList<number>();
 
     linkedListOfStrings.insert(1);
     linkedListOfStrings.insert(2);
@@ -117,7 +117,7 @@ describe("linked list", () => {
 
   //////////////// APPEND ///////////////////////
   it("should append a single node to the end of the linked list", () => {
-    const linkedList: Collection<number> = new LinkedList<number>();
+    const linkedList: LinkedList<number> = new LinkedList<number>();
 
     linkedList.insert(1);
     linkedList.insert(2);
@@ -133,7 +133,7 @@ describe("linked list", () => {
   });
 
   it("should append a multiple nodes to the end of the linked list", () => {
-    const linkedList: Collection<number> = new LinkedList<number>();
+    const linkedList: LinkedList<number> = new LinkedList<number>();
 
     linkedList.insert(1);
     linkedList.insert(2);
@@ -152,7 +152,7 @@ describe("linked list", () => {
   });
 
   it("should append a multiple nodes single to the end of the linked list", () => {
-    const linkedList: Collection<number> = new LinkedList<number>();
+    const linkedList: LinkedList<number> = new LinkedList<number>();
 
     linkedList.insert(1);
     linkedList.insert(2);
@@ -167,9 +167,9 @@ describe("linked list", () => {
     );
   });
 
-  /////////////// INSERT_BEFORE //////////////////
+  ///////////// INSERT_BEFORE //////////////////
   it("should insert before the target node", () => {
-    const linkedList: Collection<number> = new LinkedList<number>();
+    const linkedList: LinkedList<number> = new LinkedList<number>();
 
     linkedList.insert(1);
     linkedList.insert(2);
@@ -185,7 +185,7 @@ describe("linked list", () => {
   });
 
   it("should insert before the target node with only two nodes in the linked list", () => {
-    const linkedList: Collection<number> = new LinkedList<number>();
+    const linkedList: LinkedList<number> = new LinkedList<number>();
 
     linkedList.insert(1);
     linkedList.insert(2);
@@ -199,7 +199,7 @@ describe("linked list", () => {
   });
 
   it("should insert before the target node with only one node in the linked list", () => {
-    const linkedList: Collection<number> = new LinkedList<number>();
+    const linkedList: LinkedList<number> = new LinkedList<number>();
 
     linkedList.insert(1);
     linkedList.insertBefore(1, 100);
@@ -212,7 +212,7 @@ describe("linked list", () => {
 
   //////////////////////// INSERT_AFTER ////////////////////////
   it("should insert after the target node", () => {
-    const linkedList: Collection<number> = new LinkedList<number>();
+    const linkedList: LinkedList<number> = new LinkedList<number>();
 
     linkedList.insert(1);
     linkedList.insert(2);
@@ -228,7 +228,7 @@ describe("linked list", () => {
   });
 
   it("should insert after the target node with only two nodes in the linked list", () => {
-    const linkedList: Collection<number> = new LinkedList<number>();
+    const linkedList: LinkedList<number> = new LinkedList<number>();
 
     linkedList.insert(1);
     linkedList.insert(2);
@@ -241,7 +241,7 @@ describe("linked list", () => {
   });
 
   it("should insert after the target node with only one node in the linked list", () => {
-    const linkedList: Collection<number> = new LinkedList<number>();
+    const linkedList: LinkedList<number> = new LinkedList<number>();
 
     linkedList.insert(1);
 
@@ -253,10 +253,10 @@ describe("linked list", () => {
     );
   });
 
-  ///////////////// KTH FROM THE END ////////////////////////
+  /////////////// KTH FROM THE END ////////////////////////
 
   it("returns kth from the end of the linked list", () => {
-    const linkedListOfNumbers: Collection<number> = new LinkedList<number>();
+    const linkedListOfNumbers: LinkedList<number> = new LinkedList<number>();
 
     linkedListOfNumbers.insert(10);
     linkedListOfNumbers.insert(8);
@@ -268,7 +268,7 @@ describe("linked list", () => {
   });
 
   it("returns error when kth is greater than our linked list", () => {
-    const linkedListOfNumbers: Collection<number> = new LinkedList<number>();
+    const linkedListOfNumbers: LinkedList<number> = new LinkedList<number>();
 
     linkedListOfNumbers.insert(10);
     linkedListOfNumbers.insert(8);
@@ -279,7 +279,7 @@ describe("linked list", () => {
   });
 
   it("returns when k is the same length as the linked list", () => {
-    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+    const linkedListOfStrings: LinkedList<string> = new LinkedList<string>();
 
     linkedListOfStrings.insert('a');
     linkedListOfStrings.insert('b');
@@ -291,7 +291,7 @@ describe("linked list", () => {
   });
 
   it("returns an error is k is a negative number", () => {
-    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+    const linkedListOfStrings: LinkedList<string> = new LinkedList<string>();
 
     linkedListOfStrings.insert('a');
     linkedListOfStrings.insert('b');
@@ -303,7 +303,7 @@ describe("linked list", () => {
   });
 
   it("returns when linked list of size only has one node", () => {
-    const linkedListOfStrings: Collection<string> = new LinkedList<string>();
+    const linkedListOfStrings: LinkedList<string> = new LinkedList<string>();
 
     linkedListOfStrings.insert('a');
 
@@ -311,7 +311,7 @@ describe("linked list", () => {
   });
 
   it("happy path", () => {
-    const linkedListOfNumbers: Collection<number> = new LinkedList<number>();
+    const linkedListOfNumbers: LinkedList<number> = new LinkedList<number>();
 
     linkedListOfNumbers.insert(6);
     linkedListOfNumbers.insert(33);
@@ -326,5 +326,110 @@ describe("linked list", () => {
     expect(linkedListOfNumbers.kthFromEnd(5)).toBe(43);
   });
 
+
+  /////////////////// ZipList /////////////////////////////////
+    it("zips two linked list together (happy path)", () => {
+    const ll1: LinkedList<number> = new LinkedList<number>();
+    const ll2: LinkedList<number> = new LinkedList<number>();
+
+    ll1.insert(5);
+    ll1.insert(3);
+    ll1.insert(1);
+    ll2.insert(6);
+    ll2.insert(4);
+    ll2.insert(2);
+
+    const str = LinkedList.zipList(ll1, ll2).toString()
+
+    expect(str).toBe("{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> NULL");
+  });
+
+  it("checks if linked list two is empty and returns linked list one", () => {
+    const ll1: LinkedList<number> = new LinkedList<number>();
+    const ll2: LinkedList<number> = new LinkedList<number>();
+
+    ll1.insert(5);
+    ll1.insert(3);
+    ll1.insert(1);
+
+    const str = LinkedList.zipList(ll1, ll2).toString()
+    expect(str).toBe("{ 1 } -> { 3 } -> { 5 } -> NULL");
+  });
+
+
+  it("checks if one linked list one is empty and returns the linked list two", () => {
+    const ll1: LinkedList<number> = new LinkedList<number>();
+    const ll2: LinkedList<number> = new LinkedList<number>();
+
+    ll2.insert(6);
+    ll2.insert(4);
+    ll2.insert(2);
+
+    const str = LinkedList.zipList(ll1, ll2).toString()
+    expect(str).toBe("{ 2 } -> { 4 } -> { 6 } -> NULL");
+  });
+
+
+  it("zips two linked list together of different lengths", () => {
+    const ll1: LinkedList<number> = new LinkedList<number>();
+    const ll2: LinkedList<number> = new LinkedList<number>();
+
+    ll1.insert(7);
+    ll1.insert(5);
+    ll1.insert(3);
+    ll1.insert(1);
+
+    ll2.insert(4);
+    ll2.insert(2);
+
+    const str = LinkedList.zipList(ll1, ll2).toString()
+    expect(str).toBe("{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 7 } -> NULL");
+  });
+
+  it("zips two linked list together with only one node each", () => {
+    const ll1: LinkedList<number> = new LinkedList<number>();
+    const ll2: LinkedList<number> = new LinkedList<number>();
+
+    ll1.insert(1);
+    ll2.insert(2);
+
+    const str = LinkedList.zipList(ll1, ll2).toString()
+    expect(str).toBe("{ 1 } -> { 2 } -> NULL");
+  });
+
+  it("zips two linked list together with only one node in ll1 and multiple nodes in ll2", () => {
+    const ll1: LinkedList<number> = new LinkedList<number>();
+    const ll2: LinkedList<number> = new LinkedList<number>();
+
+    ll1.insert(1);
+    ll2.insert(5);
+    ll2.insert(4);
+    ll2.insert(3);
+    ll2.insert(2);
+
+    const str = LinkedList.zipList(ll1, ll2).toString()
+    expect(str).toBe("{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> NULL");
+  });
+
+  it("zips two linked list together with only one node in ll2 and multiple nodes in ll1", () => {
+    const ll1: LinkedList<number> = new LinkedList<number>();
+    const ll2: LinkedList<number> = new LinkedList<number>();
+
+    ll1.insert(5);
+    ll1.insert(4);
+    ll1.insert(3);
+    ll1.insert(1);
+    ll2.insert(2);
+
+    const str = LinkedList.zipList(ll1, ll2).toString()
+    expect(str).toBe("{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> NULL");
+  });
+
+  it("returns an error if both linked list are empty", () => {
+    const ll1: LinkedList<number> = new LinkedList<number>();
+    const ll2: LinkedList<number> = new LinkedList<number>();
+
+    expect(() => LinkedList.zipList(ll1, ll2)).toThrow("both linked lists are empty");
+  });
 });
 

@@ -2,15 +2,14 @@ import { Collection, display } from "./Collection";
 
 interface Node<T> {
   data: T,
-  next: Node<T> | undefined;
+  next?: Node<T> | undefined;
 }
 
-export class LinkedList<T> implements Collection<T> {
+export class LinkedList<T> {
 
   head: Node<T> | undefined;
   tail: Node<T> | undefined;
   // size: number;
-
 
   insert(value: T): void {
     let current = this.head;
@@ -18,11 +17,14 @@ export class LinkedList<T> implements Collection<T> {
       data: value,
       next: this.head,
     };
-    newNode.next = current;
-    this.head = newNode;
-    if(this.tail === undefined) {
-        this.tail = current;
+    if(this.tail === undefined && this.head === undefined) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.head = newNode;
+      newNode.next = current;
     }
+
   }
 
   includes(value: T): boolean {
@@ -124,7 +126,7 @@ export class LinkedList<T> implements Collection<T> {
     if (target > size || target < 0) {
       throw new Error("error");
     }
-    
+
     while(target <= size){
 
       let len = size - target;
@@ -134,6 +136,45 @@ export class LinkedList<T> implements Collection<T> {
       return current?.data;
     }
   };
+
+  static zipList(ll1: LinkedList<any>, ll2: LinkedList<any>): LinkedList<any>{
+
+    let curr1 = ll1.head;
+    let curr2 = ll2.head;
+
+    // checks if both lists are empty, throws exception
+    if(curr1 === undefined && curr2 === undefined) {
+      throw new Error("both linked lists are empty");
+    }
+
+    // checks if either of the lists are empty, returns the other list
+    if(curr1 === undefined){
+      return ll2;
+    } else if (curr2 == undefined) {
+      return ll1;
+    }
+    const zipped = new LinkedList<any>();
+
+    while(curr1 != undefined && curr2 != undefined) {
+      zipped.append(curr1.data);
+      zipped.append(curr2.data);
+      curr1 = curr1.next;
+      curr2 = curr2.next;
+    }
+    if(curr1 != undefined){
+      while(curr1 != null){
+        zipped.append(curr1.data);
+        curr1 = curr1.next;
+      }
+    } else if (curr2) {
+        while(curr2 != undefined) {
+          zipped.append(curr2.data);
+          curr2 = curr2.next;
+        }
+    }
+    return zipped;
+  }
+
 
   size(): number {
     let counter = 0;
