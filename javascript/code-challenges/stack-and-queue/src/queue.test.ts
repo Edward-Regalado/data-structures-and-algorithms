@@ -52,7 +52,10 @@ describe("Queue", () => {
 
     expect(queue).toBeDefined();
     expect(queue.size).toBe(3);
-    expect(queue.dequeue()).toBe(3);
+
+    queue.dequeue();
+
+    expect(queue.size).toBe(2);
 
   });
 
