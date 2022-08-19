@@ -1,3 +1,64 @@
+export class SetOfStacks<T> {
+
+  container: Stack<T>[];
+
+  constructor(private readonly maxHeight: number) {
+
+    if(arguments.length < 1){
+      throw new Error("maxHeight is required!");
+    }
+    this.maxHeight = maxHeight;
+    this.container = [new Stack<T>(this.maxHeight)];
+  }
+
+  push(value: T): void {
+    let lastIndex = this.container.length - 1;
+    if(this.container[lastIndex].size >= this.maxHeight){
+      let nestedStack = new Stack<T>(this.maxHeight);
+      nestedStack.push(value);
+      this.container.push(nestedStack);
+    } else {
+      this.container[lastIndex].push(value);
+    }
+  }
+
+  pop(): T | undefined {
+    let lastIndex = this.container.length - 1;
+    let poppedValue = this.container[lastIndex].pop();
+    if(this.container.length !== 1 && this.container[this.container.length - 1].size === 0){
+      this.container.pop();
+    }
+  return poppedValue;
+}
+
+  get peek(): T | undefined {
+    let lastIndex = this.container.length -1;
+    return this.container[lastIndex].peek;
+  }
+
+  // BONUS QUESTION
+  get size(): number | undefined {
+    let sum = 0;
+    // if we don't have a nestedStack at index 0, then our container is empty and we can return sum
+    if(this.isEmpty()){
+      return sum;
+    } else {
+      for(let i = 0; i < this.container.length; i++){
+        sum += this.container[i].size ? this.container[i].size : 1;
+      }
+    }
+    return sum;
+  }
+
+  isEmpty(): boolean {
+    if(this.container[0].size === 0){
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
 class Stack<T> {
   readonly _arr: T[] = [];
 
@@ -20,62 +81,5 @@ class Stack<T> {
 
   get size(): number {
     return this._arr.length;
-  }
-}
-
-export class SetOfStacks<T> {
-
-  stacks: Stack<T>[];
-
-  constructor(private readonly maxHeight: number) {
-
-    if(arguments.length < 1){
-      throw new Error("maxHeight is required!");
-    }
-    this.maxHeight = maxHeight;
-    this.stacks = [new Stack<T>(this.maxHeight)];
-  }
-
-  push(value: T): void {
-    if(this.stacks[this.stacks.length - 1].size >= this.maxHeight){
-      let stack = new Stack<T>(this.maxHeight);
-      stack.push(value);
-      this.stacks.push(stack);
-    } else {
-      this.stacks[this.stacks.length - 1].push(value);
-    }
-  }
-
-  pop(): T | undefined {
-    let popped = this.stacks[this.stacks.length - 1].pop();
-    if(this.stacks.length !== 1 && this.stacks[this.stacks.length - 1].size === 0){
-      this.stacks.pop();
-    }
-  return popped;
-}
-
-  get peek(): T | undefined {
-    return this.stacks[this.stacks.length - 1].peek;
-  }
-
-  // BONUS QUESTION
-  get size(): number | undefined {
-    let sum = 0;
-    if(this.stacks[0].size === 0){
-      return sum;
-    } else {
-      for(let i = 0; i < this.stacks.length; i++){
-        sum += this.stacks[i].size ? this.stacks[i].size : 1;
-      }
-    }
-    return sum;
-  }
-
-  isEmpty(): boolean {
-    if(this.stacks[0].size === 0){
-      return true;
-    } else {
-      return false;
-    }
   }
 }

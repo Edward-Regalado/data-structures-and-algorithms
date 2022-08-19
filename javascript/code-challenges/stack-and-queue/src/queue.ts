@@ -22,7 +22,7 @@ export class Queue<T> {
     if(this.isEmpty()) {
       throw new Error("Queue is empty");
     } else {
-      return this.storage.shift();
+      return this.storage.pop();
     }
   }
 
