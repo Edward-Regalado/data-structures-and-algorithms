@@ -2,6 +2,7 @@ export class SetOfStacks<T> {
 
   container: Stack<T>[];
 
+
   constructor(private readonly maxHeight: number) {
 
     if(arguments.length < 1){
@@ -32,14 +33,13 @@ export class SetOfStacks<T> {
 }
 
   get peek(): T | undefined {
-    let lastIndex = this.container.length -1;
+    let lastIndex = this.container.length - 1;
     return this.container[lastIndex].peek;
   }
 
   // BONUS QUESTION
   get size(): number | undefined {
     let sum = 0;
-    // if we don't have a nestedStack at index 0, then our container is empty and we can return sum
     if(this.isEmpty()){
       return sum;
     } else {
@@ -61,7 +61,6 @@ export class SetOfStacks<T> {
 
 class Stack<T> {
   readonly _arr: T[] = [];
-
   constructor(private readonly maxHeight: number) {}
 
   push(t: T) {
