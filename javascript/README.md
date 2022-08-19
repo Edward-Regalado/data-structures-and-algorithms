@@ -8,6 +8,10 @@
 2. [Insert Array Shift](./code-challenges/insert-array-shift/)
 3. [Array Binary Search](./code-challenges/array-binary-search/)
 4. [Linked List](./code-challenges/linked-list/)
+5. [Stack & Queue](./code-challenges/stack-and-queue/)
+6. [Set Of Stacks](./code-challenges/set-of-stacks/)
+7. [Animal Shelter](./code-challenges/stack-and-queue-animal-shelter/)
+
 
 ### Folder and Challenge Setup
 
