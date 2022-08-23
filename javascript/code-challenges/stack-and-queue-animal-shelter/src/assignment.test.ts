@@ -1,4 +1,4 @@
-import { Shelter } from "./shelter.ts";
+import { Shelter } from "./shelter";
 
 describe("Animal Shelter", () => {
   it("gets the next cat", () => {
@@ -31,5 +31,12 @@ describe("Animal Shelter", () => {
 
     expect(shelter.dequeue()).toBe("Pippin");
     expect(shelter.dequeue()).toBe("Oliver");
+  });
+
+  it("throws an error because the queue is empty", () => {
+    const shelter = new Shelter();
+
+    expect(() => {shelter.dequeue()}).toThrow();
+    expect(shelter.container.length).toBe(0);
   });
 });
