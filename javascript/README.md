@@ -11,6 +11,8 @@
 5. [Stack & Queue](./code-challenges/stack-and-queue/)
 6. [Set Of Stacks](./code-challenges/set-of-stacks/)
 7. [Animal Shelter](./code-challenges/stack-and-queue-animal-shelter/)
+8. [Brackets](./code-challenges/stack-queue-brackets/)
+9. [Trees](./code-challenges/trees/)
 
 
 ### Folder and Challenge Setup
