@@ -40,6 +40,11 @@
   - Argument: value
   - Returns: boolean indicating whether or not the value is in the tree at least once.
 
+### maxValue()
+
+- Argument: none
+- Returns: largest value in the binary tree
+
 
 ## Approach & Efficiency
 
@@ -51,6 +56,10 @@
   - Time: O(n)
   - Space: O(1)
 
+- `.maxValue()`
+  - Time:
+  - Space:
+
 ## API
 
 - `.add(value)`
@@ -58,6 +67,9 @@
 
 - `.contains(values)`
   - returns boolean indicating whether or not the value is in the tree at least once
+
+- `.maxValue()`
+  - returns largest values in the binary tree
 
 ## Structure and Testing
 
