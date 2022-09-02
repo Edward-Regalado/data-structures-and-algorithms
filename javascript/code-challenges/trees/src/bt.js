@@ -7,13 +7,13 @@ class BinaryTree{
 
   preOrder(node, elements = []){
     // let elements = [];
-    elements.push(node.value);
+    elements.push(this.value);
     if(this.left){
       this.preOrder(node.left, elements);
       // elements = elements.concat(left);
     }
     if(this.right){
-      this.right.preOrder();
+      this.right.preOrder(node.right, elements);
       // elements = elements.concat(right);
     }
     return elements;
