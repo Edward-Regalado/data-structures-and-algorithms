@@ -46,6 +46,10 @@ class BinaryTree{
     elements.push(node.value);
     return elements;
   }
+
+  treeMax(){
+    //TODO: extending an implementation- find max values in binary tree
+  }
 }
 
 module.exports = BinaryTree;
