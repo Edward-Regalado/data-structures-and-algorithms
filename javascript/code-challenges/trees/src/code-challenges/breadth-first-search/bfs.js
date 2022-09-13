@@ -1,14 +1,17 @@
 function breadthFirstSearch(bt){
 
-  if(bt === undefined){
-    return;
+  if(bt.root === undefined){
+    throw new Error('empty binary tree');
   }
 
   let queue = [];
-  let nodes = [];
-  while(queue.length !== 0){
+  let values = [];
+
+  queue.push(bt.root);
+
+  while(queue.length !== 0) {
     let front = queue.shift();
-    nodes.push(front.value);
+    values.push(front.value);
     if(front.left !== undefined){
       queue.push(front.left);
     }
@@ -16,7 +19,7 @@ function breadthFirstSearch(bt){
       queue.push(front.right);
     }
   }
-  return nodes;
+  return values;
 }
 
 module.exports = breadthFirstSearch;

@@ -7,7 +7,17 @@ describe('BinaryTree', () => {
   //   )
   // );
 
-  const tree = new BinaryTree(new Node(10, new Node(4)));
+  const tree = new BinaryTree();
+
+  let rootNode = new Node(1);
+  let n2 = new Node(2);
+  let n3 = new Node(3);
+
+  tree.root = rootNode;
+  rootNode.left = n2;
+  rootNode.right = n3;
+  // tree.root.right = n3;
+
   // let node = new Node(10, new Node(4));
   // let node2 = new Node(2);
   // tree(node);
@@ -19,15 +29,16 @@ describe('BinaryTree', () => {
   //   expect(tree.postOrder(node)).toEqual([2, 3, 11, 6, 7, 5, 9, 9, 1]);
   // });
 
-  it('does an pre-order traversal (root, left, right)', () => {
-    expect(tree.preOrder().toEqual([1]));
+  it('does an in-order traversal (left, root, right)', () => {
+    expect(tree.inOrder(rootNode)).toEqual([2, 1, 3]);
   });
-  // it('does an pre-order traversal (root, left, right)', () => {
-  //   expect(tree.preOrder()).toEqual([1, 7, 2, 6, 3, 11, 9, 9, 5]);
-  // });
 
-  it('creates a new BT', () => {
-    expect(tree).toBeDefined();
+  it('does an post-order traversal (left, right, root)', () => {
+    expect(tree.postOrder(rootNode)).toEqual([2, 3, 1]);
+  });
+
+  it('does an pre-order traversal (root, left, right)', () => {
+    expect(tree.preOrder(rootNode)).toEqual([1, 2, 3]);
   });
 });
 
