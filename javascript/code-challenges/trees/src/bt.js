@@ -46,9 +46,27 @@ class BinaryTree{
   }
 
   treeMax(){
-    //TODO: extending an implementation- find max values in binary tree
+    if(this.root === undefined){
+      throw new Error('empty binary tree');
+    }
+    let queue = [];
+    let maxValue = Number.MIN_SAFE_INTEGER;
+
+    queue.push(this.root);
+    while(queue.length !== 0){
+      let front = queue.shift();
+      if(front.value > maxValue){
+        maxValue = front.value;
+      }
+      if(front.left !== undefined){
+        queue.push(front.left);
+      }
+      if(front.right !== undefined){
+        queue.push(front.right);
+      }
+    }
+    return maxValue;
   }
 }
 
 module.exports = BinaryTree;
-

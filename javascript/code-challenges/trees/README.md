@@ -57,8 +57,8 @@
   - Space: O(1)
 
 - `.maxValue()`
-  - Time:
-  - Space:
+  - Time: O(n)
+  - Space: O(1)
 
 ## API
 
@@ -84,3 +84,5 @@
 ### Whiteboard
 
 ![Tree]()
+
+![Max Value](../assets/binary-tree-maxValue.PNG)
