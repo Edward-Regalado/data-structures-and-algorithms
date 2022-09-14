@@ -1,35 +1,38 @@
-const BinaryTree = require('./bt.js');
+const BinaryTree = require('./binaryTree.js');
 const Node = require('./node.js');
 
 class BinarySearchTree extends BinaryTree {
   add(number) {
-    let current = this.root;
     let newNode = new Node(number);
-    // check if root is empty- set new node to the root
-    if(!this.root){
+
+    if(this.root === undefined){
       this.root = newNode;
+      return this;
     }
-    // check if root is empty- set new node to root
-    if(!current){
-      return newNode;
-    }
+
+    let current = this.root;
+
     while(current){
-      // check left
       if(current.value > number){
-        if(!current.left){
+        if(current.left === undefined){
           current.left = newNode;
+          return this;
         } else {
           current = current.left;
         }
       }
-      // check right
       if(current.value < number){
-        if(!current.right){
+        if(current.right === undefined){
           current.right = newNode;
+          return this;
         } else {
           current = current.right;
         }
       }
+      if(current.value === number){
+        return this;
+      }
+      // return newNode;
     }
   }
 
