@@ -1,4 +1,4 @@
-class BinaryTree{
+class BinaryTree {
   constructor(){
     this.root = undefined;
   }
@@ -51,6 +51,7 @@ class BinaryTree{
     }
     let queue = [];
     let maxValue = Number.MIN_SAFE_INTEGER;
+    // let maxValue = 0;
 
     queue.push(this.root);
     while(queue.length !== 0){
