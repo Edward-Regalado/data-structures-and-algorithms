@@ -35,5 +35,5 @@ function fizzBuzz(tree) {
 
 module.exports = {
   Tree,
-  fizzBuzz,
-};
+  fizzBuzz
+}

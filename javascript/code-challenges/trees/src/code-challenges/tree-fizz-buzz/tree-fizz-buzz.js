@@ -41,9 +41,6 @@ function fizzBuzzTree(kt){
     function printTraverse(root){
       elements.push(root.value);
       if(root.children){
-        // let arr = [];
-        // elements.push(arr);
-        // elements.push(root.children);
         root.children.forEach(child => {
           elements.push(child.value);
           traverse(child);
