@@ -5,6 +5,8 @@ const breadthFirstSearch = require('../code-challenges/breadth-first-search/bfs.
 
 describe('Binary Tree Breadth-First-Search', () => {
 
+  const tree = new BinaryTree();
+  
   it('instantiates an empty tree', () => {
     const tree = new BinaryTree();
     expect(tree).toBeDefined();
