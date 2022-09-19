@@ -14,6 +14,7 @@
 8. [Brackets](./code-challenges/stack-queue-brackets/)
 9. [Trees](./code-challenges/trees/)
 10. [Trees Breadth First](./code-challenges/trees/src/code-challenges/breadth-first-search/README.md)
+11. [K-ary Tree FizzBuzz](./code-challenges/trees/src/code-challenges/tree-fizz-buzz/)
 
 
 ### Folder and Challenge Setup

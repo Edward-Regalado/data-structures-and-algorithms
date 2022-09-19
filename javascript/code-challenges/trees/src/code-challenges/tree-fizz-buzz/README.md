@@ -19,9 +19,9 @@ Determine whether or not the value of each node is divisible by 3, 5 or both. Cr
 ## Approach & Efficiency
 
 - Big O Notation
-  - Time:
-  - Space:
+  - Time: O(n)
+  - Space: O(n)
 
 ### Whiteboard
 
-![k-ary tree]()
+![k-ary tree](../../../../assets/k-aryTreeFizzBuzz.PNG)

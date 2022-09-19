@@ -60,6 +60,24 @@ class BinaryTree {
     return elements;
   }
 
+  kPrint(){
+    let elements = [];
+    if(this.root === undefined){
+      throw new Error('binary tree is empty');
+    }
+    elements.push(this.root);
+    function traverse(root){
+      if(root.children){
+        root.children.forEach(child => {
+          traverse(child);
+        });
+      }
+    }
+    traverse(this.root);
+    return elements;
+  }
+
+
   breadthFirstSearch(){
     if(this.root === undefined){
       throw new Error('empty binary tree');
