@@ -19,6 +19,12 @@ describe('insertion sort', () => {
     expect(insertionSort(arr)).toEqual([1]);
   });
 
+  it('sorts an array with multiple values, including a zero', () => {
+    const arr =  [20, 1, 0, 10, 5, ];
+
+    expect(insertionSort(arr)).toEqual([0, 1, 5, 10, 20]);
+  });
+
   it('sorts an array with repeating values', () => {
     const arr =  [5, 5, 5, 5, 5];
 
