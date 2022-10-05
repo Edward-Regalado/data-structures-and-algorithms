@@ -15,7 +15,7 @@
 9. [Trees](./code-challenges/trees/)
 10. [Trees Breadth First](./code-challenges/trees/src/code-challenges/breadth-first-search/README.md)
 11. [K-ary Tree FizzBuzz](./code-challenges/trees/src/code-challenges/tree-fizz-buzz/)
-12. [Insertion Sort](./code-challenges/sorting/insertion-sort/README.md)
+12. [Insertion Sort](./code-challenges/sorting/insertion-sort/)
 
 
 ### Folder and Challenge Setup
