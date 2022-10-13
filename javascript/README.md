@@ -17,6 +17,7 @@
 11. [K-ary Tree FizzBuzz](./code-challenges/trees/src/code-challenges/tree-fizz-buzz/)
 12. [Insertion Sort](./code-challenges/sorting/insertion-sort/)
 13. [Merge Sort](./code-challenges/sorting/merge-sort/)
+13. [Movie Sort](./code-challenges/sorting/movie-sort/)
 
 
 ### Folder and Challenge Setup
