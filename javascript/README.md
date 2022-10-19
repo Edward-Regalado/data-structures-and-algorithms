@@ -18,6 +18,7 @@
 12. [Insertion Sort](./code-challenges/sorting/insertion-sort/)
 13. [Merge Sort](./code-challenges/sorting/merge-sort/)
 13. [Movie Sort](./code-challenges/sorting/movie-sort/)
+14. [Hash Table](./code-challenges/hashtable/)
 
 
 ### Folder and Challenge Setup
