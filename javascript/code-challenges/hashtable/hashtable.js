@@ -71,7 +71,7 @@ class HashMap {
   // takes in a key 'string', converts to random number between 0 and map.length
   hash(key){
     // loop through our string each character at a time, grab unicode value, add to previous value, then calculate hashed index
-    let sum = key.split(',').reduce((accumulate, current) => {
+    let sum = key.split('').reduce((accumulate, current) => {
       let unicodeValue = current.charCodeAt(0);
       let total = accumulate + unicodeValue;
       return total;
