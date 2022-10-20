@@ -47,7 +47,7 @@ describe('HashMap', () => {
     hm.set('John', 'Joe');
     hm.set('Eric', 'Good');
     hm.set('Gilbert', 'Funnyman');
-    expect(hm.keys()).toEqual(['Eric', 'John', 'Gilbert']);
+    expect(hm.keys()).toEqual(['John', 'Eric', 'Gilbert' ]);
   });
 
   it('Successfully handle a collision within the HashMap', () => {
