@@ -45,7 +45,6 @@
 - Argument: none
 - Returns: largest value in the binary tree
 
-
 ## Approach & Efficiency
 
 - `.add(value)`
