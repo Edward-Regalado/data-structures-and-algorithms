@@ -42,7 +42,7 @@ describe('Hashmap left join', () => {
     expect(leftJoin(mapOne, mapTwo)).toEqual([['a', 1, 2], ['b', 3, 4], ['c', 5, 6]]);
   });
 
-  it('joins two hashmaps with one no matches', () => {
+  it('joins two hashmaps with no matching keys', () => {
     const mapOne = new Map();
     mapOne.set('a', 1);
 
@@ -50,6 +50,32 @@ describe('Hashmap left join', () => {
     mapTwo.set('b', 4);
 
     expect(leftJoin(mapOne, mapTwo)).toEqual([['a', 1, null]]);
+  });
+
+  it('joins two hashmaps with right join', () => {
+    const mapOne = new Map();
+    mapOne.set('a', 1);
+    mapOne.set('b', 3);
+    mapOne.set('c', 5);
+
+    const mapTwo = new Map();
+    mapTwo.set('a', 2);
+    mapTwo.set('b', 4);
+    mapTwo.set('c', 6);
+
+    expect(leftJoin(mapOne, mapTwo, 'right')).toEqual([['a', 2, 1], ['b', 4, 3], ['c', 6, 5]]);
+
+  });
+
+  it('joins two hashmaps with right join with no matching keys', () => {
+    const mapOne = new Map();
+    mapOne.set('a', 1);
+
+    const mapTwo = new Map();
+    mapTwo.set('b', 4);
+
+    expect(leftJoin(mapOne, mapTwo, 'right')).toEqual([['b', 4, null]]);
+
   });
 
 });
