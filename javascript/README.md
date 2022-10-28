@@ -20,6 +20,7 @@
 14. [Movie Sort](./code-challenges/sorting/movie-sort/)
 15. [Hash Table](./code-challenges/hashtable/)
 16. [Tree Intersection](./code-challenges/tree-intersection/)
+17. [Hashmap Left Join](./code-challenges/hashmap-left-join/)
 
 
 ### Folder and Challenge Setup
