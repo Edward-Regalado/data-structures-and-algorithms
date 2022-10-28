@@ -28,8 +28,8 @@
 
 ### API
 
-- leftJoin(leftMap, rightMap)
-  - Arguments: two hash maps
+- leftJoin(leftMap, rightMap, string)
+  - Arguments: two hash maps and optional string of 'right' to perform right join.
   - Returns: a matrix of values with a left join logic applied
 
 ### Whiteboard
