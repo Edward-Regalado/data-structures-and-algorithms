@@ -13,20 +13,25 @@
 
 ### Approach & Efficiency
 
-## Example
-
-diligent =>	employed,	 	diligent =>	idle
-fond =>	enamored, 	 	fond	=> averse
-guide	=> usher, 	 	guide	=> follow
-outfit =>	garb, 	 	flow	=> jam
-wrath	=> anger, 	 	wrath	=> delight
+- create a results array
+- loop through leftMap and push all key/value pairs as a nested array to our results array
+- loop through results array
+  - check if rightMap has the key/string at index 0 of the nested array at the current i index => `results[i][0]`
+  - If key exists, retrieve the value and push it to nested array at the current i index
+  - If key does not exist, push null to the nested array at the current i index
+- return the results matrix
 
 ### Big O
 
-- Time:
-- Space:
+- Time: O(n)
+- Space: O(n)
 
 ### API
 
+- leftJoin(leftMap, rightMap)
+  - Arguments: two hash maps
+  - Returns: a matrix of values with a left join logic applied
 
 ### Whiteboard
+
+![Left Join](../assets/leftJoin.PNG)
