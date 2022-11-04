@@ -15,15 +15,15 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 ## Approach & Efficiency
 
 - `.addNode(value)`
-  - Time: O(n)
+  - Time: O(1)
   - Space: O(1)
 
 - `.addEdge(node1, node2)`
-  - Time: O(n)
+  - Time: O(1)
   - Space: O(1)
 
 - `.getNodes()`
-  - Time: O(n)
+  - Time: O(1)
   - Space: O(n)
 
 - `.getNeighbors(node)`
@@ -31,8 +31,8 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
   - Space: O(n)
 
 - `.size()`
-  - Time: O(n)
-  - Space: O(n)
+  - Time: O(1)
+  - Space: O(1)
 
 ## API
 
