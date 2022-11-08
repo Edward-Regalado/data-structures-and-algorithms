@@ -10,14 +10,15 @@ class Graph {
     return node;
   }
 
-  addEdge(start, end = undefined, weight = 0) {
-    const neighbors = this.adjacencyList.get(start.value);
-    if(end === undefined){
-      neighbors.push(new Edge());
-      return start.value;
-    } else {
-      neighbors.push(new Edge(end.value, weight)); // push node object to the array
-    }
+  addEdge(start, end, weight = 0) {
+    const neighbors = this.adjacencyList.get(start.value); // target the array inside the the hm value
+    neighbors.push(new Edge(end.value, weight));
+    // if(end === undefined){
+    //   neighbors.push(new Edge());
+    //   return start.value;
+    // } else {
+    // neighbors.push(new Edge(end.value, weight)); // push node object to the array
+    // }
   }
 
   getNodes() {
