@@ -34,6 +34,10 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
   - Time: O(1)
   - Space: O(1)
 
+- `breadthFirst()`
+  - Time: O(n)
+  - Space: O(n)
+
 ## API
 
 - `.addNode`
@@ -60,3 +64,12 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 - `.size`
   - Arguments: none
   - Returns the total number of nodes in the graph
+
+- `breadthFirst`
+  - Arguments: node
+  - Return: a collection of node in the order they were visited
+  - Display the collection
+
+## Whiteboard
+
+![Breadth First]()
