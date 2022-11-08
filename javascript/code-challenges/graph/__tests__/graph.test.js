@@ -93,19 +93,18 @@ describe('Graph', () => {
     const graph = new Graph();
     const n1 = new Node('a');
     graph.addNode(n1);
-    graph.addEdge(n1);
-    console.log('empty edge', graph.getNeighbors(n1));
-    expect(graph.getNeighbors(n1)).toEqual([{'node': {}, 'weight': 0}]);
+    graph.addEdge(n1, n1);
+    expect(graph.getNeighbors(n1)).toEqual([{'node': 'a', 'weight': 0}]);
   });
 
-  it('returns a graph with two nodes and two edges. One edge points to nothing', () => {
+  it('returns a graph with two nodes and two edges. One edge points to itself', () => {
     const graph = new Graph();
     const n1 = new Node('a');
     const n2 = new Node('b');
     graph.addNode(n1);
     graph.addNode(n2);
-    graph.addEdge(n1);
+    graph.addEdge(n1, n1);
     graph.addEdge(n1, n2, 30);
-    expect(graph.getNeighbors(n1)).toEqual([{'node': {}, 'weight': 0}, {'node': 'b', 'weight': 30}]);
+    expect(graph.getNeighbors(n1)).toEqual([{'node': 'a', 'weight': 0}, {'node': 'b', 'weight': 30}]);
   });
 });
