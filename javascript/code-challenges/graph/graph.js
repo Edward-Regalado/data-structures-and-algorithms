@@ -6,19 +6,15 @@ class Graph {
   }
 
   addNode(node){
-    this.adjacencyList.set(node.value, []);
+    let arr = new Array();
+    this.adjacencyList.set(node.value, arr);
     return node;
   }
 
   addEdge(start, end, weight = 0) {
-    const neighbors = this.adjacencyList.get(start.value); // target the array inside the the hm value
-    neighbors.push(new Edge(end.value, weight));
-    // if(end === undefined){
-    //   neighbors.push(new Edge());
-    //   return start.value;
-    // } else {
-    // neighbors.push(new Edge(end.value, weight)); // push node object to the array
-    // }
+    let edge = new Edge(end, weight);
+    const neighbors = this.adjacencyList.get(start.value);
+    neighbors.push(edge);
   }
 
   getNodes() {
@@ -31,6 +27,28 @@ class Graph {
 
   getNeighbors(node) {
     return this.adjacencyList.get(node.value);
+  }
+
+  breadthFirstSearch(node){
+    const results = [];
+    const queue = [];
+    const visited = new Set();
+
+    visited.add(node.value);
+    queue.push(node);
+
+    while(queue.length > 0){
+      let front = queue.shift();
+      results.push(front.value);
+      let neighbors = this.getNeighbors(front);
+      for(const item in neighbors){
+        if(!visited.has(neighbors[item].node)){
+          queue.push(neighbors[item].node);
+          visited.add(neighbors[item].node);
+        }
+      }
+    }
+    return results;
   }
 
   size(){
