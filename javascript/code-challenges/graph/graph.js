@@ -3,6 +3,7 @@ const Edge = require('./edge');
 class Graph {
   constructor(){
     this.adjacencyList = new Map();
+    // this.adjacencyList = {};
   }
 
   addNode(node){
@@ -28,6 +29,11 @@ class Graph {
   getNeighbors(node) {
     return this.adjacencyList.get(node.value);
   }
+
+  getNeighborsForBusinessTrip(node){
+    return this.adjacencyList.get(node);
+  }
+
 
   breadthFirstSearch(node){
     const results = [];
