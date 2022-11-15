@@ -23,6 +23,7 @@
 17. [Hashmap Left Join](./code-challenges/hashmap-left-join/)
 18. [Graph](./code-challenges/graph/)
 19. [Graph Business Trip](./code-challenges/graph-business-trip/)
+20. [Can Solve Maze](./code-challenges/maze/)
 
 
 ### Folder and Challenge Setup
